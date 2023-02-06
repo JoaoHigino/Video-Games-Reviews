@@ -64,7 +64,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.username?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert variant="danger" key={idx}>
                 {message}
               </Alert>
             ))}
@@ -97,14 +97,19 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-            {errors.password2?.map((message, idx) => (
-              <Alert key={idx} variant="warning">
+            {errors.username?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
                 {message}
               </Alert>
             ))}
 
+            {errors.password1?.map((message, idx) => (
+              <Alert key={idx} variant="warning">
+                {message}
+              </Alert>
+            ))}
             <Button
-              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright} text-uppercase`}
+              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
               type="submit"
             >
               Sign up
@@ -118,9 +123,10 @@ const SignUpForm = () => {
         </Container>
 
         <Container className={`mt-3 ${appStyles.Content}`}>
-          <Link className={styles.Link} to="/signin">
-            Already have an account? <span>Sign in</span>
+          <Link className={styles.Link} to="/signup">
+            Don't have an account? <span>Sign up here!</span>
           </Link>
+
         </Container>
       </Col>
       <Col
