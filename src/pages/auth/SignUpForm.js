@@ -64,7 +64,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.username?.map((message, idx) => (
-              <Alert variant="danger" key={idx}>
+              <Alert variant="warning" key={idx}>
                 {message}
               </Alert>
             ))}
@@ -97,17 +97,12 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-            {errors.username?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
-                {message}
-              </Alert>
-            ))}
-
-            {errors.password1?.map((message, idx) => (
+            {errors.password2?.map((message, idx) => (
               <Alert key={idx} variant="warning">
                 {message}
               </Alert>
             ))}
+
             <Button
               className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
               type="submit"
@@ -123,10 +118,9 @@ const SignUpForm = () => {
         </Container>
 
         <Container className={`mt-3 ${appStyles.Content}`}>
-          <Link className={styles.Link} to="/signup">
-            Don't have an account? <span>Sign up here!</span>
+          <Link className={styles.Link} to="/signin">
+            Already have an account? <span>Sign in</span>
           </Link>
-
         </Container>
       </Col>
       <Col
@@ -135,7 +129,7 @@ const SignUpForm = () => {
       >
         <Image
           className={`${appStyles.FillerImage}`}
-          src={"https://i0.wp.com/www.metaljesusrocks.com/wp-content/uploads/2018/07/Top5GameControllersTHUMB2SM-min.jpg?w=640&ssl=1"}
+          src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero2.jpg"}
         />
       </Col>
     </Row>
