@@ -1,6 +1,9 @@
 .App {
     font-family: 'Roboto Mono', monospace;
-    background-color: #f8f8f8;
+    background-image: url("./assets/cosmic-background-with-colorful-laser-lights-perfect-digital-wallpaper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
 }
 
@@ -13,7 +16,7 @@
 }
 
 a {
-    color: #121213;
+    color: #007bff;
     transition: color ease-in-out 0.3s;
 }
 
