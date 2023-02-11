@@ -1,5 +1,6 @@
 .NavBar {
     background-color: transparent;
+    position: absolute;
   }
   
 .NavLink {
