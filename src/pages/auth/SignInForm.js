@@ -49,16 +49,16 @@ const SignInForm = () => {
           className={`${frame.ContentToneBorder} ${frame.Shadow}container-md`}
         >
           <h4 className={`${appStyles.ComicText} text-center text-uppercase`}>
-            Welcome back... it's time to sign in!
+            Welcome back gamer... it's time to sign in!
           </h4>
 
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
-              <Form.Label className="d-none">Hero Name</Form.Label>
+              <Form.Label className="d-none">Gamer Name</Form.Label>
               <Form.Control
                 className="text-center"
                 type="text"
-                placeholder="Hero Name"
+                placeholder="Gamer Name"
                 name="username"
                 value={username}
                 onChange={handleChange}
