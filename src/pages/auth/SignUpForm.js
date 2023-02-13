@@ -54,7 +54,7 @@ const SignUpForm = () => {
               <Form.Label className="d-none">Name</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Hero Name"
+                placeholder="Gamer Name"
                 name="username"
                 value={username}
                 onChange={handleChange}
