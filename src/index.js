@@ -7,13 +7,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { CurrentUserProvider } from "./contexts/CurrentUserContext";
 
 createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
     <Router>
       <CurrentUserProvider>
         <App />
       </CurrentUserProvider>
-    </Router>
-  </React.StrictMode>
+    </Router>,
 );
 
 // If you want to start measuring performance in your app, pass a function
