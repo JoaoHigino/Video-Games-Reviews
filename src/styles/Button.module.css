@@ -2,7 +2,7 @@
   font-size: 0.8rem;
   align-self: center;
   border-radius: 100px;
-  border-color: black;
+  border-color: rgb(253, 7, 7);
   padding: 4px 10px;
   margin-left: 2px;
   margin-right: 2px;
@@ -76,7 +76,7 @@
 }
 
 .Bright {
-  background-color: #2ed9ff;
+  background-color: #121313;
   color: #ff0050;
 }
 

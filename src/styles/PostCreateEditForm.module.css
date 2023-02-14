@@ -1,3 +1,86 @@
-.Container {
-    min-height: 343px;
+.Form {
+  background-color: #afcbd6;
+  width: 60% !important;
+  margin: 1rem 20% 3rem 20%;
+  border-radius: 50px;
+}
+
+.Button {
+  width: 20%;
+}
+
+.Input {
+  background: #ffffff;
+  border: 1px solid #211a1d;
+  box-sizing: border-box;
+  border-radius: 100px;
+  color: #211a1d !important;
+  text-align: center;
+  padding: 10px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.Alert {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.Category {
+  height: 2.5rem;
+}
+
+.Label {
+  width: 20%;
+  margin-left: 40%;
+  text-align: center;
+}
+
+.File {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.Content {
+  padding: 15px !important;
+  border-radius: 50px;
+}
+
+.Input:focus {
+  border: 2px solid #f3d207;
+}
+
+@media (max-width: 991.5px) {
+  .File {
+    width: 80%;
+    margin-left: 10%;
   }
+}
+
+@media (max-width: 767.5px) {
+  .Form {
+    width: 100% !important;
+    margin: 3rem 0 3rem 0;
+  }
+
+  .Input {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .Alert {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .Button {
+    width: 30%;
+  }
+}
+
+@media (max-width: 330px) {
+  .File {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
