@@ -32,34 +32,20 @@ const NavBar = () => {
       className={styles.NavLink}
       activeClassName={styles.Active}
       to="/posts/create"
-    >
-      <i className="far fa-plus-square"></i>Add post
+    ><i class="fa-solid fa-puzzle-piece"></i>
+     Add post
     </NavLink>
   );
   const loggedInIcons = (
     <>
-      <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/feed"
-      >
-        <i className="fas fa-stream"></i>Feed
-      </NavLink>
-      <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/liked"
-      >
-        <i className="fas fa-heart"></i>Liked
-      </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-        <i className="fas fa-sign-out-alt"></i>Sign out
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>Sign out
       </NavLink>
       <NavLink
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+        <Avatar src={currentUser?.profile_image} text="Profile" height={35} />
       </NavLink>
     </>
   );
@@ -70,7 +56,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/signin"
       >
-        <i className="fas fa-sign-in-alt"></i>Sign in
+        <i class="fa-light fa-joystick"></i>Sign in
       </NavLink>
       <NavLink
         to="/signup"
@@ -109,7 +95,7 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i className="fas fa-home"></i>Home
+              <i class="fa-solid fa-gamepad"></i>Home
             </NavLink>
 
             {currentUser ? loggedInIcons : loggedOutIcons}
