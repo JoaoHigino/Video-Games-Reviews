@@ -10,7 +10,6 @@ import PostCreateForm from "./components/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
 import PostEditForm from "./pages/posts/PostEditForm";
-import ProfilesPage from "./pages/profiles/ProfilesPage";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import PopularProfiles from "./pages/profiles/PopularProfiles";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
@@ -31,7 +30,6 @@ function App() {
               <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
               <Route exact path="/profiles" render={() => <PopularProfiles />} />
               <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
-              <Route exact path="/profiles/:id" render={() => <ProfilesPage />} />
               <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
               <Route render={() => <p>Sorry, That page cannot be found!</p>} />
             </Switch>
