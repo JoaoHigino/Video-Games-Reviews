@@ -58,7 +58,6 @@ const LandingPage = () => {
   );
 
   return (
-    // Shows logo if user is not logged in
 
     <div>{currentUser ? loggedInLanding : loggedOutLanding}</div>
   );
