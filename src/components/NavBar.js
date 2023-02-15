@@ -32,14 +32,14 @@ const NavBar = () => {
       className={styles.NavLink}
       activeClassName={styles.Active}
       to="/posts/create"
-    ><i class="fa-solid fa-puzzle-piece"></i>
+    ><i className="fa-solid fa-puzzle-piece"></i>
      Add post
     </NavLink>
   );
   const loggedInIcons = (
     <>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-      <i class="fa-solid fa-arrow-right-from-bracket"></i>Sign out
+      <i className="fa-solid fa-arrow-right-from-bracket"></i>Sign out
       </NavLink>
       <NavLink
         className={styles.NavLink}
@@ -56,7 +56,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/signin"
       >
-        <i class="fa-light fa-joystick"></i>Sign in
+        <i className="fa-light fa-joystick"></i>Sign in
       </NavLink>
       <NavLink
         to="/signup"
@@ -95,7 +95,7 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i class="fa-solid fa-gamepad"></i>Home
+              <i className="fa-solid fa-gamepad"></i>Home
             </NavLink>
 
             {currentUser ? loggedInIcons : loggedOutIcons}
