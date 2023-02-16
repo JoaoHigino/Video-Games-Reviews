@@ -6,6 +6,7 @@ import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
+import PopularProfiles from "./pages/profiles/PopularProfiles";
 import PostPage from "./pages/posts/PostPage";
 import LandingPage from "./pages/LandingPage";
 import PostsPage from "./pages/posts/PostsPage";
@@ -29,7 +30,7 @@ function App() {
             exact
             path="/"
             render={() => (
-              <PostsPage message="No results found. Adjust the search keyword." />
+              <PostsPage message="No results found. Please search again." />
             )}
           />
           <Route
@@ -37,7 +38,7 @@ function App() {
             path="/feed"
             render={() => (
               <PostsPage
-                message="No results found. Adjust the search keyword or follow a user."
+                message="No results found. Please search again or follow a user."
                 filter={`owner__followed__owner__profile=${profile_id}&`}
               />
             )}
@@ -47,18 +48,19 @@ function App() {
             path="/liked"
             render={() => (
               <PostsPage
-                message="No results found. Adjust the search keyword or like a post."
+                message="No results found. Please search again or like a post."
                 filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
               />
             )}
           />
+          <Route exact path="/posts/:id" render={() => <PostPage />} />
+          <Route exact path="/" render={() => <LandingPage />} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/" render={() => <LandingPage />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
-          <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/profiles/:id" render={() => <PopularProfiles />} />
           <Route
             exact
             path="/profiles/:id/edit/username"
