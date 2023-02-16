@@ -27,7 +27,7 @@ const LandingPage = () => {
               <div className="text-center">
                 <h5 className={appStyles.Terminal}>
                 Do you like to play video games? <p></p>
-                Login to be part of our community!
+                Sign In to be part of our community!
                 </h5>
               </div>
             </Row>

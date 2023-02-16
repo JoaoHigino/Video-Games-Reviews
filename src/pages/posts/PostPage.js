@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from "react";
+
+import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import InfiniteScroll from "react-infinite-scroll-component";
+
+import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import Comment from "../comments/Comment";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
+
 import CommentCreateForm from "../comments/CommentCreateForm";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+
+import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
-import frame from "../../styles/Containers.module.css";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 function PostPage() {
   const { id } = useParams();
@@ -24,7 +30,7 @@ function PostPage() {
     const handleMount = async () => {
       try {
         const [{ data: post }, { data: comments }] = await Promise.all([
-          axiosReq.get(`/posts/${id}/`),
+          axiosReq.get(`/posts/${id}`),
           axiosReq.get(`/comments/?post=${id}`),
         ]);
         setPost({ results: [post] });
@@ -38,12 +44,12 @@ function PostPage() {
   }, [id]);
 
   return (
-    <Row>
-      <Container className={frame.SingleComponent}>
+    <Row className="h-100">
+      <Col className="py-2 p-0 p-lg-2" lg={8}>
+        <PopularProfiles mobile />
         
-          <Post {...post.results[0]} setPosts={setPost} postPage />
-        
-        <Container>
+        <Post {...post.results[0]} setPosts={setPost} postPage />
+        <Container className={appStyles.Content}>
           {currentUser ? (
             <CommentCreateForm
               profile_id={currentUser.profile_id}
@@ -55,7 +61,6 @@ function PostPage() {
           ) : comments.results.length ? (
             "Comments"
           ) : null}
-          {/* Mapping over returned comments */}
           {comments.results.length ? (
             <InfiniteScroll
               children={comments.results.map((comment) => (
@@ -77,7 +82,10 @@ function PostPage() {
             <span>No comments... yet</span>
           )}
         </Container>
-      </Container>
+      </Col>
+      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+        <PopularProfiles />
+      </Col>
     </Row>
   );
 }

@@ -5,35 +5,37 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
-
-import Asset from "../../components/Asset";
 
 import Upload from "../../assets/addpost.png";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
-import { useHistory } from "react-router";
+import Asset from "../../components/Asset";
+import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
+import { Alert } from "react-bootstrap";
 import { useRedirect } from "../../hooks/useRedirect";
 
 function PostCreateForm() {
   useRedirect("loggedOut");
+
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
     title: "",
-    content: "",
     image: "",
+    content: "",
   });
-  const { title, content, image } = postData;
+
+  const { title, image, content } = postData;
 
   const imageInput = useRef(null);
+
   const history = useHistory();
 
+  
   const handleChange = (event) => {
     setPostData({
       ...postData,
@@ -56,8 +58,8 @@ function PostCreateForm() {
     const formData = new FormData();
 
     formData.append("title", title);
-    formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
+    formData.append("content", content);
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
@@ -70,58 +72,35 @@ function PostCreateForm() {
     }
   };
 
-  const textFields = (
-    <div className="text-center">
-      <Form.Group>
-        <Form.Label>Title</Form.Label>
-        <Form.Control
-          type="text"
-          name="title"
-          value={title}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Content</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={6}
-          name="content"
-          value={content}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.content?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
-        onClick={() => history.goBack()}
-      >
-        cancel
-      </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        create
-      </Button>
-    </div>
-  );
-
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form className={styles.Form} onSubmit={handleSubmit}>
       <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-            className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
-          >
+        <Col className="pt-3">
+          <Container>
+            <Form.Group>
+              <Form.Label className="d-none">Title</Form.Label>
+              <Form.Control
+                type="text"
+                name="title"
+                placeholder="Title"
+                value={title}
+                onChange={handleChange}
+                className={styles.Input}
+              />
+            </Form.Group>
+            {errors?.title?.map((message, idx) => (
+              <Alert className={styles.Alert} variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+          </Container>
+        </Col>
+      </Row>
+      <Row>
+      </Row>
+      <Row>
+        <Col className="pt-3">
+          <Container>
             <Form.Group className="text-center">
               {image ? (
                 <>
@@ -130,7 +109,7 @@ function PostCreateForm() {
                   </figure>
                   <div>
                     <Form.Label
-                      className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                      className={`${btnStyles.Button} ${btnStyles.Yellow} btn`}
                       htmlFor="image-upload"
                     >
                       Change the image
@@ -150,6 +129,7 @@ function PostCreateForm() {
               )}
 
               <Form.File
+                className={styles.File}
                 id="image-upload"
                 accept="image/*"
                 onChange={handleChangeImage}
@@ -157,16 +137,52 @@ function PostCreateForm() {
               />
             </Form.Group>
             {errors?.image?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert className={styles.Alert} variant="warning" key={idx}>
                 {message}
               </Alert>
             ))}
-
-            <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-          <Container className={appStyles.Content}>{textFields}</Container>
+      </Row>
+      <Row>
+        <Col className="pt-3">
+          <Container>
+            <Form.Group>
+              <Form.Label className="d-none">Content</Form.Label>
+              <Form.Control
+                as="textarea"
+                name="content"
+                placeholder="Content"
+                rows={5}
+                value={content}
+                onChange={handleChange}
+                className={`${styles.Input} ${styles.Content}`}
+              />
+            </Form.Group>
+            {errors?.content?.map((message, idx) => (
+              <Alert className={styles.Alert} variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+          </Container>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Container className="d-flex justify-content-center mt-3 mb-3">
+            <Button
+              className={`${btnStyles.Button} ${btnStyles.Bright} ${styles.Button}`}
+              onClick={() => history.goBack()}
+            >
+              cancel
+            </Button>
+            <Button
+              className={`${btnStyles.Button} ${btnStyles.Bright} ${styles.Button}`}
+              type="submit"
+            >
+              create
+            </Button>
+          </Container>
         </Col>
       </Row>
     </Form>
