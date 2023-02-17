@@ -4,6 +4,7 @@ import { Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { axiosReq } from "../api/axiosDefaults";
 import { useLocation } from "react-router";
+import styles from "../styles/ProfileSearch.module.css";
 import appStyles from "../App.module.css";
 
 function ProfileSearch({ filter = "" }) {
@@ -38,7 +39,7 @@ function ProfileSearch({ filter = "" }) {
   return (
     <div className={`container-md text-center`}>
       <Form
-        className={appStyles.Header}
+        className={styles.Header}
         onSubmit={(event) => event.preventDefault()}
       >
         <Form.Control
@@ -50,7 +51,7 @@ function ProfileSearch({ filter = "" }) {
         />
       </Form>
 
-      <div className={appStyles.ResultsScroll}>
+      <div className={styles.ResultsScroll}>
         {hasLoaded ? (
           profiles.results.map((profile) => (
             <Container key={profile.id}>
