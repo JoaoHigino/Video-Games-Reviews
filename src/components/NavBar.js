@@ -33,13 +33,21 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/posts/create"
     ><i className="fa-solid fa-puzzle-piece"></i>
-     Add post
+      Add post
     </NavLink>
   );
   const loggedInIcons = (
     <>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/contact/create"
+      >
+        <i className="fa-solid fa-signature"></i>
+        Contact Us
+      </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-      <i className="fa-solid fa-arrow-right-from-bracket"></i>Sign out
+        <i className="fa-solid fa-arrow-right-from-bracket"></i>Sign out
       </NavLink>
       <NavLink
         className={styles.NavLink}
