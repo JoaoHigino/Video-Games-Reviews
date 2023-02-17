@@ -1,6 +1,7 @@
 .NavBar {
-  background-color: transparent;
+  background-color:#960b00;
   position: absolute;
+  padding: 0;
 }
 
 .NavLink {
@@ -9,12 +10,4 @@
 
 .Active i {
   color: #44b318;
-}
-
-.navbar-toggler {
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
 }
