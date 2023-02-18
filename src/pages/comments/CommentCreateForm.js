@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
-import styles from "../../styles/Button.module.css";
+import styles from "../../styles/CommentCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
-import btnStyles from "../../styles/Button.module.css"
 
-function CommentCreateForm(props) {
-  const { post, setPost, setComments, profileImage, profile_id } = props;
+const CommentCreateForm = (props) => {
+  const {
+    post, setPost, setComments, profileImage, profile_id,
+  } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {
@@ -38,7 +39,7 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
-      console.log(err);
+      
     }
   };
 
@@ -50,8 +51,8 @@ function CommentCreateForm(props) {
             <Avatar src={profileImage} />
           </Link>
           <Form.Control
-            className={`${styles.Form}`}
-            placeholder="Share your thoughts..."
+            className={styles.Form}
+            placeholder="my comment..."
             as="textarea"
             value={content}
             onChange={handleChange}
@@ -60,14 +61,14 @@ function CommentCreateForm(props) {
         </InputGroup>
       </Form.Group>
       <button
-        className={`${btnStyles.ButtonComment} btn d-block ml-auto`}
+        className={`${styles.Button} btn d-block ml-auto`}
         disabled={!content.trim()}
         type="submit"
       >
-        post
+        Post
       </button>
     </Form>
   );
-}
+};
 
 export default CommentCreateForm;

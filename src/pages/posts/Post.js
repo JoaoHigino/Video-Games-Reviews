@@ -16,6 +16,7 @@ const Post = (props) => {
     comments_count,
     likes_count,
     like_id,
+    favourite_id,
     title,
     content,
     image,
@@ -65,6 +66,47 @@ const Post = (props) => {
         results: prevPosts.results.map((post) => {
           return post.id === id
             ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleFavourite = async () => {
+    try {
+      const { data } = await axiosRes.post("/favourites/", {
+        post: id,
+      });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? {
+              ...post,
+              favourite_id: data.id,
+            }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // Sends delete request to API to delete the favourite instance as well as update the state
+  const handleRemoveFavourite = async () => {
+    try {
+      await axiosRes.delete(`/favourites/${favourite_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? {
+              ...post,
+              favourite_id: null,
+            }
             : post;
         }),
       }));
@@ -128,8 +170,39 @@ const Post = (props) => {
           </Link>
           {comments_count}
         </div>
-      </Card.Body>
-    </Card>
+        {is_owner ? (
+          <>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>You can't favourite your own post</Tooltip>}
+            >
+              <i className={`fa-regular fa-star ${styles.FavouriteIcon}`} />
+            </OverlayTrigger>
+          </>
+        ) : favourite_id ? (
+          <>
+            <span onClick={handleRemoveFavourite}>
+              <i className={`fa-solid fa-star ${styles.FavouriteIcon}`} />
+            </span>
+          </>
+        ) : currentUser ? (
+          <>
+            <span onClick={handleFavourite}>
+              <i className={`fa-regular fa-star ${styles.FavouriteIcon}`} />
+            </span>
+          </>
+        ) : (
+          <>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Log in to favourite posts</Tooltip>}
+            >
+              <i className={`fa-regular fa-star ${styles.FavouriteIcon}`} />
+            </OverlayTrigger>
+          </>
+        )}
+    </Card.Body>
+    </Card >
   );
 };
 

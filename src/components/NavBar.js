@@ -46,6 +46,13 @@ const NavBar = () => {
         <i className="fa-solid fa-signature"></i>
         Contact Us
       </NavLink>
+      <NavLink
+        to="/favourites"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i className={`fa-solid fa-star ${styles.hide}`}></i>Favourites
+      </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
         <i className="fa-solid fa-arrow-right-from-bracket"></i>Sign out
       </NavLink>

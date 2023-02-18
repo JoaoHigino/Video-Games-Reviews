@@ -55,6 +55,17 @@ function App() {
               />
             )}
           />
+          <Route
+            exact
+            path="/favourites"
+            render={() => (
+              <PostsPage
+                message="No results found. Did you favourite any posts?"
+                // need to check the filter string
+                filter={`favourites__owner__profile=${profile_id}&ordering=-favourites__created_at&`}
+              />
+            )}
+          />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
