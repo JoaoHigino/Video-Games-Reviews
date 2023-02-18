@@ -51,7 +51,7 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
-        <i className={`fa-solid fa-star ${styles.hide}`}></i>Favourites
+        <i className="fa-regular fa-face-grin-stars"></i>Favourites
       </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
         <i className="fa-solid fa-arrow-right-from-bracket"></i>Sign out

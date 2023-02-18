@@ -95,7 +95,6 @@ const Post = (props) => {
     }
   };
 
-  // Sends delete request to API to delete the favourite instance as well as update the state
   const handleRemoveFavourite = async () => {
     try {
       await axiosRes.delete(`/favourites/${favourite_id}/`);
