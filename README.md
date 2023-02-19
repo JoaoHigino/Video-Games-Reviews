@@ -16,6 +16,7 @@
 During the planning of this project, I considered which features and functionality should be available to the user, and how to provide these whilst maximising the user experience.
 
 ## Project Goals
+
 A react frontend website and django backend API. Linked together to provide full CRUD functionality. 
 
 A site that is accessed via login and provides users with the features of creating posts and comments and editing their profile and superpowers. 
@@ -93,7 +94,9 @@ An agile development strategy was implemented in this project as user stories we
 ### Landing page
 
 ![landing page](../video-games-reviews/src/assets/readmefiles/landingpage.png)
+
 - Styled to give the feel of a video gamer database login
+
 - user can only login from this screen
 
 ### Navigation 
@@ -167,7 +170,7 @@ An agile development strategy was implemented in this project as user stories we
 
 - Controls section at the top of the page includes a search bar, category filter and post button. These are above the posts so that the user is instantly aware that they can manipulate the page content.
 
-- Search bar allows users to search for posts on the website by title and author name. 
+- Search bar allows users to search for posts on the website by title. 
 
 - Add Post button allows users to be redirected to the 'Create Post' page, where they can add their own post to the website. The button only appears if the current user is logged in.
 
@@ -176,7 +179,6 @@ An agile development strategy was implemented in this project as user stories we
 - Display the most followed profiles with the possibilty to follow/unfollow a profile.
 
 ![home screen](../video-games-reviews/src/assets/readmefiles/home.png)
-
 
 - Buttons are present at the bottom of the post to allow the user to comment, add favourite and like the post.
 
@@ -243,6 +245,12 @@ An agile development strategy was implemented in this project as user stories we
 
 ![without favourites](../video-games-reviews/src/assets/readmefiles/withoufavourites.png)
 
+### Contact Page
+
+- A user can contact the admin
+
+![contact](../video-games-reviews/src/assets/readmefiles/contact.png)
+
 ### Add Post
 
 - Allows logged in users to create their owns posts on the website.
@@ -286,57 +294,48 @@ An agile development strategy was implemented in this project as user stories we
 
 ![edit image](../video-games-reviews/src/assets/readmefiles/cangeimagepost.png)
 
-
-
-
-
-
-
-
-
 ## React Components
 
 React components are blocks of code that are reusable throughout an application. Rather than categorising each page as a whole, each page can be broken down into parts, known as components. They are advantageous as they reduce the need for writing the same code multiple times for different pages. Large pages can often be quite complex, so working on a particular part (component) of a page independently can reduce complexity and the opportunity for making errors. Additionally, an error caused in a particular component will be isolated to itself so won't impact the whole site's functionality. Finally, components were used to easily provide a consistent and familiar theme and user experience across the website
 
-### Asset
-
-- Used to display a loading spinner that appears when users are waiting for content to load on the website, as well as a display a message for when no post results are found.
-- The loading spinner improves the user experience as users are aware the content is loading and avoid becoming momentarily confused due to white space being present until content loads.
-- The message improves the user experience as users are aware that the no results exist and don't waste time waiting for results that won't appear.
-
 ### Avatar
 
 - Used to display user profile images, such as on posts, comments, profiles and the navbar.
+
 - User experience improved as it allows consistent and familiar styling to be used throughout the application. It also allows users to be creative and feel unique with their profile.
 
 ### MoreDropdown
 
 - Used to create a 3 dots icon that when clicked, would provide button links.
+
 - MoreDropdown used on posts and comments, to allow the author to edit or delete their content.
+
 - ProfileDropdown variation allows the profile owner to edit their profile or change their username and password.
-- Improves the user experience as users become familiar with the 3 dot icon and assoicate it with allowing them to access more functionality on the site.
+
 - Also improves the user experience by allowing supplementary content to be hidden from the main content. Thus, not keeping the laout simple and not overwhelming for the user.
 
 ### NavBar
 
 - Used on every page to allow users to access different pages on the website.
+
 - Forms a consistent part of the layout on every page to contribute to the website's identity.
+
 - Improves the user experience as users are able to reach any page from any page and creating a sense of familiarity.
 
 ### PageNotFound
 
 - Used to notify the user that the current URL path returns no content.
+
 - Improves the user experience by providing feedback after an error, rather than leaving them to become confused.
-- Navbar is displayed so that users can easily go to another page.
+
 
 ## Future Features
 
-- Vote Percentage Bar 
-    - Currently users can see which option is more popular on each post by comparing the number for each option. In the future a bar could be added to each post and two colours could be used to show the percentage of each vote option. The bar could move using a transition effect when a user adds a vote on a post. This would provide a more attractive graphic to users.
-- Followers
-    - At the beginning of this project I thought that having followers is unnecessary for this website. I still believe that the site funcitons sufficiently without the need of followers. However I can see how following profiles could make the site superior as users could also have a page to see the posts from users that they follow. This would provide an extra level to the custom experience on the site.
-- Multiple Post Images
-    - Currently users can post an individual image showing two options that can be voted for. In the future it may be easier for users to have the option to upload 2 individual images, rather than combining 2 images into 1.
+- To be able to search for a user instead of only serach for a post.
+
+- Create a rating system to the posts.
+
+- Create categories like Playstation/Xbox/Twitch/PC.
 
 ## Manual Testing
 
@@ -348,7 +347,7 @@ React components are blocks of code that are reusable throughout an application.
 | 002 | Navbar links are accurate and load the correct pages. | Navlinks accurately redirect users to the correct page. No broken links. | Pass |
 | 003| Clicking a navbar link should redirect users quickly, without unnecessary page reloads. | Navigation between pages is quick. No unnecessary page reloads, only changing components are re-rendered. | Pass |
 | 004 | Users can see their login status in the navbar. | Users are able to see their login status by seeing either the profile image and sign out navlinks when logged in, and the sign up and sign in navlinks when logged out. | Pass |
-| 005 | User has access to different links in the navbar depending on log in status. | Conditional rendering successfully makes the 'Your Votes', 'Favourites', 'Profile', and 'Sign Out' links visible for logged in users, whereas only logged out users have the 'Sign Up' and 'Sign In' links visible. | Pass |
+| 005 | User has access to different links in the navbar depending on log in status. | Conditional rendering successfully makes the 'Favourites', 'Contact Us', 'Profile', and 'Sign Out' links visible for logged in users, whereas only logged out users have the 'Sign Up' and 'Sign In' links visible. | Pass |
 
 ### Authentication
 
@@ -363,142 +362,235 @@ React components are blocks of code that are reusable throughout an application.
 | 012 | Users are able to sign in to their already created account. | When users input valid data into the 'Sign In' form they can successfully log into their account. | Pass |
 | 013 | The 'sign up' link redirects users to the 'Sign Up' page. | Clicking the 'sign up' link successfully redirects users to the 'Sign Up' page. | Pass |
 | 014 | Users can see their logged in status. | Users can check the navbar to see their log in status | Pass |
-| 015 | When users are accessing pages exclusive to logged in users (e.g. 'Your Votes' page), they are redirected to the 'Home' page after signing out. | Users are successfully redirected to the 'Home' page after signing out. | Pass |
-| 016 | Logged out users are unable to access pages exclusive to logged in users (e.g. 'Add Post' page) and are either reidrected to the 'Home' page or see a page not found message. | Logged out users are unable to use logged in user functionality are redirected to the 'Home' page or see a page not found message.  | Pass |
-| 017 | Logged in users are unable to access the pages exclusive to logged out users (e.g. 'Sign Up' and 'Sign In' pages) | When a logged in users tries to access a URL to a page exclusive to logged out users, they are redirected to the 'Home' page. | Pass |
-| 018 | Users can log out of their account using the 'Sign Out' link in the navbar. | Users can log out and are redirected to the 'Home' page. | Pass |
-| 019 | When users successfully register for an account, the profile instance is created in the API and has the correct data. | User instance is created and the data is correct. | Pass |
+| 015 | Logged out users are unable to access pages exclusive to logged in users (e.g. 'Add Post' page) and are either reidrected to the 'Home' page or see a page not found message. | Logged out users are unable to use logged in user functionality are redirected to the 'Home' page or see a page not found message.  | Pass |
+| 016 | Logged in users are unable to access the pages exclusive to logged out users (e.g. 'Sign Up' and 'Sign In' pages) | When a logged in users tries to access a URL to a page exclusive to logged out users, they are redirected to the 'Home' page. | Pass |
+| 017 | Users can log out of their account using the 'Sign Out' link in the navbar. | Users can log out and are redirected to the 'Home' page. | Pass |
 
 ### Posts
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 020 | The 'Home' page renders a feed of posts if they exist. Most recent posts are seen first. | A feed of posts can be seen if post instances are created. Most recent posts are seen at the top of the feed. | Pass |
-| 021 |The 'Your Votes' page renders a feed of posts that the current user has already voted on. | A feed of posts is shown; only including posts that the user has voted on. | Pass |
-| 022 |The 'Favourites' page renders a feed of posts that the current user has already favourited. | A feed of posts is shown; only including posts that the user has favourited. | Pass |
-| 023 | A loading spinner is shown on the 'Home', 'Your Votes', 'Favourites' pages whilst the post data is being retrieved. | A loading spinner appears initially and is then replaced by a feed of posts. | Pass |
-| 024 | When no posts exist on the 'Home', 'Your Votes', 'Favourites' pages. A message is displayed to inform the user that there are no results. | No results image and message seen on each page when no posts exist. | Pass |
-| 025 | When more than 10 posts exist, infinite scrolling is used to render more posts as the user scrolls down the page. | User can render more than 10 posts by scrolling down the page. | Pass |
-| 026 | The search bar can be used to filter the posts feed by a post's title or author's name. | The search bar returns a feed of posts the where the input matches either the post's title or author's name. | Pass |
-| 027 | The category dropdown can be used to filter the posts feed to a single category. | When a category is selected, the posts feed ony includes posts of that category. | Pass |
-| 028 | The 'Post' button (allowing users to add a post) only renders for logged in users. | Only logged in users can see the 'Post' button. | Pass |
-| 029 | Each post in the feed displays the all the correct information about the post. | Each post includes a title, author name, profile image, date, description, image, comment button, vote option1 button, vote option2 button and favourite button. | Pass |
-| 030 | 'Post' page (showing detail about a particular post) can be accessed by clicking on a particular post's image. | Cliciking on a post's image loads a page containing only the specific post. | Pass |
-| 031 | The 'Post' page shows comments for a post if they exist, or a message if they don't. | Comments can be seen in a feed below the post when they exist. If there are no comments, the user is informed. | Pass |
-| 032 | If a post has more than 10 comments, these can be loaded by scrolling down the page. | Infinite scrolling is present, as scrolling down the page loads more comments if they exist. | Pass |
-| 033 | If the user is logged in, the 'Post' page shows the 'Add Comment' form. | 'Add Comment' visible under the post, only if the user is logged in. | Pass |
-| 034 | If the user is the author of a post, the 'MoreDropdown' (links to edit and delete the post) is rendered. | The 'MoreDropdown is only rendered on the 'Post' page if the user is the author of the particular post. | Pass |
-| 035 | Only the author of a post, can access its 'Edit Post' page. |  The post author can access the 'Edit Post' form, whereas other users are redirected to the 'Home' page. | Pass |
-| 036 | Only logged in users can access the 'Create Post' page. | Logged in users can access the 'Create Post' page, whereas logged out users are redirected to the 'Home' page. | Pass |
-| 037 | Logged in users can use the 'Create Post' form to add a new post to the website. | Submitting valid data in the 'Create Post' form will create a post which can be seen in the posts feed. | Pass |
-| 038 | Users cannot create a post if data is invalid in the 'Post Create' form. | 'Create Post' form handles invalid data when a user tries to submit the form (e.g. empty fields) and informs the user of the error as an alert message under the invalid field. | Pass |
-| 039 | Clicking the 'Cancel' button in the 'Create Post' form results in no post being created and the user being returned to the 'Home' page. | No post is created and the user is redirected to the 'Home' page. | Pass |
-| 040 | When the user successfully creates a post, the post instance is created in the API and has the correct data. | Post instance is created and the data is correct. | Pass |
-| 041 | 'Edit Post' form renders pre-filled with existing post data. | Each input has the existing post data when the form is loaded. | Pass |
-| 042 | Users cannot edit a post if data is invalid in the 'Post Edit' form. | 'Edit Post' form handles invalid data when a user tries to submit the form (e.g. empty fields) and informs the user of the error as an alert message under the invalid field. | Pass |
-| 043 | Clicking the 'Cancel' button in the 'Edit Post' form results in no post changes being saved and the user being returned to the 'Home' page. | No post data is changed and the user is redirected to the 'Home' page. | Pass |
-| 044 | When the user successfully edits a post, the post instance is updated in the API and has the correct data. | Post instance is updated and the data is correct. | Pass |
-| 045 | Clicking the delete button in the 'MoreDropdown' on the 'Post' page results in post being deleted and the user is redirected to the 'Home' page. | The post is deleted and is no longer seen in the post feed. The user is redirected to the 'Home' page. | Pass |
-| 046 | When the user successfully deletes a post, the post instance is deleted in the API. | Post instance is deleted. | Pass |
-
-### Votes
-
-| Test Case | Test Description | Test Outcome | Test Result |
-| ----------- | ----------- | ----------- | ----------- |
-| 047 | Logged in users can vote on posts made by other users by clicking on either vote option button on a post. | Logged in users can vote on posts made by other users. | Pass | 
-| 048 | Logged out users are unable to vote on posts and are informed by an overlay message. | Logged out users are unable to vote on posts and can notice an overlay message when hovering over a vote option button. | Pass | 
-| 049 | Logged in users cannot vote on their own post and are informed by an overlay message. | Logged in users are unable to vote on their own posts and can notice an overlay message when hovering over a vote option button. | Pass | 
-| 050 | When a user votes on a post, the count for the specific vote option is increased by 1. | Voting for an option causes the number beside the button (count) to increase by one. | Pass | 
-| 051 | Users are unable to vote for both options and are informed by an overlay message. | Users cannot vote for both options. An overlay message is seen when hovering over the vote option and the count doesn't increase when clicked. | Pass | 
-| 052 | When a user successfully votes, the vote instance is created in the API. The post instance has its votes_count and specific option count field updated in the API. | A vote instance is created and the post instance is updated correctly in the API. | Pass | 
-| 053 | When a user successfully votes, the specific vote option button colour becomes solid. | The vote option button becomes solid after voting. | Pass | 
-| 054 | Users are able to delete their votes by clicking on the vote option button again. | Vote is deleted. The option count next to the button decreases by 1. | Pass | 
-| 055 | When a user successfully deletes a vote, the vote instance is deleted in the API. The post instance has its votes_count and specific option count field updated in the API. | A vote instance is created and the post instance is updated correctly in the API. | Pass | 
-| 056 | A user can vote for the other option (effectively edit their vote choice) on a post if they have deleted their previous vote on the post. | Users are able to change their vote choice if they have deleted their previous vote on the post. | Pass | 
+| 018 | The 'Home' page renders a feed of posts if they exist. Most recent posts are seen first. | A feed of posts can be seen if post instances are created. Most recent posts are seen at the top of the feed. | Pass |
+| 019 |The 'Favourites' page renders a feed of posts that the current user has already favourited. | A feed of posts is shown; only including posts that the user has favourited. | Pass |
+| 020 | When no posts exist on the 'Home' or 'Favourites' pages. A message is displayed to inform the user that there are no results. | No results image and message seen on each page when no posts exist. | Pass |
+| 021 | The search bar can be used to filter the posts feed by a post's title. | The search bar returns a feed of posts the where the input matchespost's title. | Pass |
+| 022 | The 'Add Post' button (allowing users to add a post) only renders for logged in users. | Only logged in users can see the 'Post' button. | Pass |
+| 023 | Each post in the feed displays the all the correct information about the post. | Each post includes a title, author name, profile image, date, description, image, comment button, and favourite button. | Pass |
+| 024 | 'Post' page (showing detail about a particular post) can be accessed by clicking on a particular post's image. | Cliciking on a post's image loads a page containing only the specific post. | Pass |
+| 025 | The 'Post' page shows comments for a post if they exist, or a message if they don't. | Comments can be seen in a feed below the post when they exist. If there are no comments, the user is informed. | Pass |
+| 026 | If the user is logged in, the 'Post' page shows the 'Add Comment' form. | 'Add Comment' visible under the post, only if the user is logged in. | Pass |
+| 027 | Only the author of a post, can access its 'Edit Post' page. |  The post author can access the 'Edit Post' form, whereas other users are redirected to the 'Home' page. | Pass |
+| 028 | Logged in users can use the 'Add Post' form to add a new post to the website. | Submitting valid data in the 'Add Post' form will create a post which can be seen in the posts feed. | Pass |
+| 029 | Users cannot create a post if data is invalid in the 'Add Post' form. | 'Add Post' form handles invalid data when a user tries to submit the form (e.g. empty fields) and informs the user of the error as an alert message under the invalid field. | Pass |
+| 030 | Clicking the 'Cancel' button in the 'Create Post' form results in no post being created and the user being returned to the 'Home' page. | No post is created and the user is redirected to the 'Home' page. | Pass |
+| 031 | 'Edit Post' form renders pre-filled with existing post data. | Each input has the existing post data when the form is loaded. | Pass |
+| 032 | Users cannot edit a post if data is invalid in the 'Post Edit' form. | 'Edit Post' form handles invalid data when a user tries to submit the form (e.g. empty fields) and informs the user of the error as an alert message under the invalid field. | Pass |
+| 033 | Clicking the 'Cancel' button in the 'Edit Post' form results in no post changes being saved and the user being returned to the 'Home' page. | No post data is changed and the user is redirected to the 'Home' page. | Pass ||
+| 034 | Clicking the delete button in the 'MoreDropdown' on the 'Post' page results in post being deleted and the user is redirected to the 'Home' page. | The post is deleted and is no longer seen in the post feed. The user is redirected to the 'Home' page. | Pass |
 
 ### Comments
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 057 | Logged in users can comment on posts. | Comment form is rendered on the 'Post' page for logged in users and they can successfully create comments. Comment can be seen under the comment form.| Pass | 
-| 058 | Logged out users cannot comment on posts. | No comment form is rendered on the 'Post' page so they cannot make a comment. | Pass | 
-| 059 | Users cannot add a comment of empty content. | Submitting an empty comment form doesn't result in a comment being made. | Pass |
-| 060 | When a user comments on a post, the count for comments is increased by 1. | Commenting on a post causes the number beside the button (count) to increase by one. | Pass | 
-| 061 | When a user successfully creates a comment, a comment instance is created in the API. The post instance has its comments_count updated in the API. | A comment instance is created and the post instance is updated correctly in the API. | Pass | 
-| 062 | Authors of a comment, can edit their comment. | Comment authors can see a 'MoreDropdown' icon and click the edit button to render a 'Edit Comment' form. Updating the content and saving the form results in the comment being updated. | Pass |
-| 063 | Users cannot edit a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot edit its content. | Pass |
-| 064 | When a user successfully edits a comment, the comment instance is updated in the API. | A comment instance is created in the API. | Pass | 
-| 065 | Authors of a comment, can delete their comment. | Comment authors can see a 'MoreDropdown' icon and click the delete button to delete the comment. | Pass |
-| 066 | Users cannot delete a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot delete the comment. | Pass |
-| 067 | When a user deletes a comment on a post, the count for comments is decreased by 1. | Deleting a comment on a post causes the number beside the button (count) to decrease by one. | Pass |
-| 068 | When a user successfully deletes a comment, the comment instance is deleted in the API. The post instance has its comments_count updated in the API. | The comment instance is deleted and the post instance is updated correctly in the API. | Pass | 
+| 035 | Logged in users can comment on posts. | Comment form is rendered on the 'Post' page for logged in users and they can successfully create comments. Comment can be seen under the comment form.| Pass | 
+| 036 | Logged out users cannot comment on posts. | No comment form is rendered on the 'Post' page so they cannot make a comment. | Pass | 
+| 037| Users cannot add a comment of empty content. | Submitting an empty comment form doesn't result in a comment being made. | Pass |
+| 038 | When a user comments on a post, the count for comments is increased by 1. | Commenting on a post causes the number beside the button (count) to increase by one. | Pass | 
+| 039 | Authors of a comment, can edit their comment. | Comment authors can see a 'MoreDropdown' icon and click the edit button to render a 'Edit Comment' form. Updating the content and saving the form results in the comment being updated. | Pass |
+| 040 | Users cannot edit a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot edit its content. | Pass |
+| 041 | Authors of a comment, can delete their comment. | Comment authors can see a 'MoreDropdown' icon and click the delete button to delete the comment. | Pass |
+| 042 | Users cannot delete a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot delete the comment. | Pass |
+| 043 | When a user deletes a comment on a post, the count for comments is decreased by 1. | Deleting a comment on a post causes the number beside the button (count) to decrease by one. | Pass |
 
 ### Favourites
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 069 | Logged in users can favourite posts. | Logged in users can click the star icon to favourite a post. | Pass | 
-| 070 | Logged out users cannot favourite posts and are informed by an overlay message. | Logged out users cannot favourite posts and can notice an overlay message to explain the error when hovering over the favourite button. | Pass |
-| 071 | Users cannot favourite their own posts and are informed by an overlay. | Users cannot favourite their own posts and can notice an overlay message to explain the error when hovering over the favourite button. | Pass |
-| 072 | When a user successfully favourites a post, the favourite button colour becomes solid. | A solid button colour is shown when the post is set as a favourite. | Pass |
-| 073 | When a user successfully favourites a post, a favourite instance is created in the API. | Instance is created in the API. | Pass |
-| 074 | Users can delete the favourite by clicking the favourite button again. | Clicking the favourite button again removes the favourite. | Pass |
-| 075 | When a user successfully favourites a post, the favourite button colour becomes no longer solid. | Solid button colour disappears when the post is set to no longer be a favourite. | Pass |
-| 075 | When a user successfully removes a favourite on a post, a favourite instance is deleted in the API. | Instance is deleted in the API. | Pass |
+| 044 | Logged in users can favourite posts. | Logged in users can click the star icon to favourite a post. | Pass | 
+| 045 | Users cannot favourite their own posts and are informed by an overlay. | Users cannot favourite their own posts and can notice an overlay message to explain the error when hovering over the favourite button. | Pass |
+| 046 | When a user successfully favourites a post, the favourite button colour becomes solid. | A solid button colour is shown when the post is set as a favourite. | Pass |
+| 047 | Users can delete the favourite by clicking the favourite button again. | Clicking the favourite button again removes the favourite. | Pass |
+| 048 | When a user successfully favourites a post, the favourite button colour becomes no longer solid. | Solid button colour disappears when the post is set to no longer be a favourite. | Pass |
+
+### Likes
+
+| Test Case | Test Description | Test Outcome | Test Result |
+| ----------- | ----------- | ----------- | ----------- |
+| 049 | Logged in users can like posts. | Logged in users can click the heart icon to like a post. | Pass | 
+| 050 | Users cannot like their own posts and are informed by an overlay. | Users cannot like their own posts and can notice an overlay message to explain the error when hovering over the like button. | Pass |
+| 051 | When a user successfully like a post, the like button colour becomes solid. | A solid button colour is shown when the post is liked. | Pass |
+| 052 | Users can delete the like by clicking the like button again. | Clicking the like button again removes the favourite. | Pass |
 
 ### Profiles 
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 076 | Users can view profiles by clicking on the profile image image or name link on a post. | Clicking on either link redirects the user to the to the profile page. | Pass |
-| 077 | Logged in users can also access their own profile via the 'Profile' navlink. | Navlink is present and redirects the user correctly. | Pass |
-| 078 | Profile page renders an information section (e.g. profile image, title, description), statistics (posts, votes made, votes received) section and posts feed. | Profile page renders information, statistics and feed sections. | Pass |
-| 079 | The statistics section shows the correct information. | Statistics accurately show the number of posts, votes made and votes received by a user. | Pass |
-| 080 | When a user visits another user's profile and votes on one of their posts, the votes received count increases by correctly. | Voting on a post in the feed on the profile page causes the votes received to increase by 1. | Pass |
-| 081 | When a user visits another user's profile and removes a vote on one of their posts they had previous voted on, the votes received count decreases correctly. | Removing a vote on a post in the feed on the profile page causes the votes received to decrease by 1. | Pass |
-| 082 | If a user votes or removes a vote on a post and then returns to their profile, the votes made count updates correctly. | Voting on post increases the vote count, and removing a vote decreases the vote made count. | Pass |
-| 083 | If a user creates a post or deletes a post and then returns to their profile, the post count updates correctly. | Creating a post increases the post count, and deleting a post decreases the post count. | Pass |
-| 084 | When a profile's posts, votes made or votes received count is updated, the fields are also updated in the API. | API updates to show correct profile data. | Pass |
-| 085 | The 'ProfileDropdown' icon (providing links to 'Edit Profile', 'Change Username' and 'Change Password') is only present for users visiting their own profile. | 'ProfileDropdown' icon visible on a user's own profile but not when visiting a different user's profile. | Pass |
-| 086 | 'Edit Profile' form loads pre-filled with existing profile data. | The current profile data can be seen when loading the 'Edit Profile' form. | Pass |
-| 087 | Users can update their profile image and description by submitting valid data in the 'EditProfile' form. | Users are able to update their profile by submitting valid data. | Pass |
-| 088 | Users cannot submit the 'EditProfile' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
-| 089 | Clicking 'Cancel' in the 'EditProfile' form results in no data updates on the profile. | Clicking 'Cancel' does not update the profile and the user is redirected back to their profile. | Pass |
-| 090 | When the profile is successfully updated, the 'Profile' instance is updated correctly in the API. | Instance is updated correctly in the API. | Pass |
-| 091 | 'Change Username' form loads pre-filled with existing profile username. | The current username data can be seen when loading the 'Change Username' form. | Pass |
-| 092 | Users can update their username by submitting valid data in the 'ChangeUsername' form. | Users are able to update their username by submitting valid data. | Pass |
-| 093 | Users cannot submit the 'Change Username' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
-| 094 | Clicking 'Cancel' in the 'Change Username' form results in no data updates on the profile. | Clicking 'Cancel' does not update the username and the user is redirected back to their profile. | Pass |
-| 095 | When the username is successfully updated, the 'Profile' instance is updated correctly in the API. | Instance is updated correctly in the API. | Pass |
-| 096 | Users can update their password by submitting valid data in the 'Change Password' form. | Users are able to update their password by submitting valid data. | Pass |
-| 097 | Users cannot submit the 'Change Password' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
-| 098 | Clicking 'Cancel' in the 'Change Password' form results in no data updates on the profile. | Clicking 'Cancel' does not update the password and the user is redirected back to their profile. | Pass |
-| 099 | When the password is successfully updated, the 'Profile' instance is updated correctly in the API. | Instance is updated correctly in the API. | Pass |
+| 053 | Users can view profiles by clicking on the profile image image or name link on a post. | Clicking on either link redirects the user to the to the profile page. | Pass |
+| 054 | Logged in users can also access their own profile via the 'Profile' navlink. | Navlink is present and redirects the user correctly. | Pass |
+| 055 | Profile page renders an information section (e.g. profile image, title, description), statistics (posts, followers, following) section and posts feed. | Profile page renders information, statistics and feed sections. | Pass |
+| 056 | The statistics section shows the correct information. | Statistics accurately show the number of posts, followers and following by a user. | Pass |
+| 057 | If a user creates a post or deletes a post and then returns to their profile, the post count updates correctly. | Creating a post increases the post count, and deleting a post decreases the post count. | Pass |
+| 058 | The 'ProfileDropdown' icon (providing links to 'Edit Profile', 'Change Username' and 'Change Password') is only present for users visiting their own profile. | 'ProfileDropdown' icon visible on a user's own profile but not when visiting a different user's profile. | Pass |
+| 059 | 'Edit Profile' form loads pre-filled with existing profile data. | The current profile data can be seen when loading the 'Edit Profile' form. | Pass |
+| 060 | Users can update their profile image and description by submitting valid data in the 'EditProfile' form. | Users are able to update their profile by submitting valid data. | Pass |
+| 061 | Users cannot submit the 'EditProfile' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
+| 062 | Clicking 'Cancel' in the 'EditProfile' form results in no data updates on the profile. | Clicking 'Cancel' does not update the profile and the user is redirected back to their profile. | Pass |
+| 063 | 'Change Username' form loads pre-filled with existing profile username. | The current username data can be seen when loading the 'Change Username' form. | Pass |
+| 064 | Users can update their username by submitting valid data in the 'ChangeUsername' form. | Users are able to update their username by submitting valid data. | Pass |
+| 065 | Users cannot submit the 'Change Username' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
+| 066 | Clicking 'Cancel' in the 'Change Username' form results in no data updates on the profile. | Clicking 'Cancel' does not update the username and the user is redirected back to their profile. | Pass |
+| 067 | Users can update their password by submitting valid data in the 'Change Password' form. | Users are able to update their password by submitting valid data. | Pass |
+| 068 | Users cannot submit the 'Change Password' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
+| 069 | Clicking 'Cancel' in the 'Change Password' form results in no data updates on the profile. | Clicking 'Cancel' does not update the password and the user is redirected back to their profile. | Pass |
+
+## Code Validation
+
+### Html
+
+- No errors found
+
+![html](../video-games-reviews/src/assets/readmefiles/w3validator.png) 
+
+
+### CSS
+
+- The W3C CSS Validator Service was used to validate the project's custom CSS files to ensure there were no syntax errors.
+
+![css](../video-games-reviews/src/assets/readmefiles/w3c.png) 
+
+### Python
+
+- Comments
+
+![py](../video-games-reviews/src/assets/readmefiles/contactmodels.png) - Models
+
+![py](../video-games-reviews/src/assets/readmefiles/contactserializer.png) - Serializer
+
+![py](../video-games-reviews/src/assets/readmefiles/contactsviews.png) - Views
+
+- Likes
+
+![py](../video-games-reviews/src/assets/readmefiles/likesmodels.png) - Models
+
+![py](../video-games-reviews/src/assets/readmefiles/likesserializer.png) - Serializer
+
+![py](../video-games-reviews/src/assets/readmefiles/likesviews.png) - Views
+
+- Profiles
+
+![py](../video-games-reviews/src/assets/readmefiles/profilesodels.png) - Models
+
+![py](../video-games-reviews/src/assets/readmefiles/postsserialzer.png) - Serializer
+
+![py](../video-games-reviews/src/assets/readmefiles/profileview.png) - Views
+
+- Favourites
+
+![py](../video-games-reviews/src/assets/readmefiles/favouritesmodels.png) - Models
+
+![py](../video-games-reviews/src/assets/readmefiles/favouritesserializer.png) - Serializer
+
+![py](../video-games-reviews/src/assets/readmefiles/favouritesviews.png) - Views
+
+- Contact
+
+![py](../video-games-reviews/src/assets/readmefiles/contactmodels.png) - Models
+
+![py](../video-games-reviews/src/assets/readmefiles/contactserializer.png) - Serializer
+
+![py](../video-games-reviews/src/assets/readmefiles/contactsviews.png) - Views
+
+- Posts
+
+![py](../video-games-reviews/src/assets/readmefiles/postsmodels.png) - Models
+
+![py](../video-games-reviews/src/assets/readmefiles/postsserialzer.png) - Serializer
+
+![py](../video-games-reviews/src/assets/readmefiles/postsviews.png) - Views
+
+### Lighthouse Scores
+
+The site scored fine. Performance different a lot using live site vs incognito vs normal vs dev deployment.
+
+- Main Page
+
+![Lighthouse](../video-games-reviews/src/assets/readmefiles/lighouse.png) 
+
+- Add Post
+
+![Lighthouse](../video-games-reviews/src/assets/readmefiles/lighouseaddpost.png) 
+
+- Favourite
+
+![Lighthouse](../video-games-reviews/src/assets/readmefiles/lighousefavourite.png)
+
+- Profile
+
+![Lighthouse](../video-games-reviews/src/assets/readmefiles/lighouseprofile.png)
+
+### Devices used for manual testing
+
+Site was tested using the following desktop and mobile browsers:
+
+- Chrome  
+
+![chrome](../video-games-reviews/src/assets/readmefiles/chrome.png) 
+
+- Safari 
+
+![safari](../video-games-reviews/src/assets/readmefiles/safari.png) 
+
+- Edge
+
+![edge](../video-games-reviews/src/assets/readmefiles/edge.png) 
+
+- Opera
+
+![edge](../video-games-reviews/src/assets/readmefiles/opera.png) 
+
+### Bugs
+
+### Remaining Bugs
+
+- Image detail doesn't render correct
+
+![bug](../video-games-reviews/src/assets/readmefiles/bug.png) 
+
+- Bug on IOS mobile devices, turn off ‘prevent cross site tracking’ in iOS settings is the only way to make the website works on iphones/iPads.
+
 
 ## Technologies Used
 
-### Main Languages Used
-
+### Languages and Frameworks Used
 - HTML
-- CS
 - JavaScript
+- React
 
 ### Dependencies and Programs Used
 
 - ReactJS - Used to build the components making up the front end website.
-- React Bootstrap - Used to create layouts and styles on the front end website.
-- Axios - Used to make HTTP requests from the front end website to the API.
-- JWT-Decode - Used to extract information from JWTs.
-- React-Infinte-Scroll - Used to automatically load more data from API when a user scrolls down a page.
-- Google Fonts - Used to provide a custom font on the website.
-- Font Awesome - Used to add custom icons on the website.
-- Gitpod - Used as an IDE to build the project.
-- GitHub - Used to store the project in a repository. Used as an agile tool.
-- Prettier - Used to format code.
-- Balsamiq - Used to create wireframes.
-- Draw.io - Used to create database model diagrams.
-- Heroku - Used to deploy and host the project.
 
+- React Bootstrap - Used to create layouts and styles on the front end website.
+
+- Axios - Used to make HTTP requests from the front end website to the API.
+
+- JWT-Decode - Used to extract information from JWTs.
+
+- React-Infinte-Scroll - Used to automatically load more data from API when a user scrolls down a page.
+
+- Google Fonts - Used to provide a custom font on the website.
+
+- Font Awesome - Used to add custom icons on the website.
+
+- Gitpod - Used as an IDE to build the project.
+
+- GitHub - Used to store the project in a repository. Used as an agile tool.
+
+- Free logo design - used to create logo.
+
+- Freepik - used to add picture to the profiles.
+
+- Heroku - Used to deploy and host the project.
 
 ## Deployment 
 
@@ -507,24 +599,41 @@ React components are blocks of code that are reusable throughout an application.
 Note that the API will also have to configured to allow access to local hosts.
 
 - Manually Downloading the Repository:
+
     - Opening the project repository at: https://github.com/JoaoHigino/video-games-reviews
+
     - Opening the dropdown on the 'code' button.
+
     - Downloading the zip file.
+
     - Extracting the files from the zip file into a new folder on your computer.
+
     - Opening the folder in an IDE of your choice.
+
     - Updating the the "start" script value to "react-scripts --openssl-legacy-provider start".
+
     - running "npm install" in the terminal.
+
     - running "npm start" in the terminal.
 
 - Cloning the Repository:
+
     - Opening the project repository at: https://github.com/JoaoHigino/video-games-reviews
+
     - Opening the dropdown on the 'code' button.
+
     - Copying the link under the HTTPS heading (https://github.com/JoaoHigino/video-games-reviews.git).
+
     - Opening an IDE of your choice (must have Git support or relevant git extension).
+
     - Open the terminal and create a directory to store the repository.
+
     - Type "git clone https://github.com/JoaoHigino/video-games-reviews.git" and press enter in the terminal.
+
     - Updating the the "start" script value to "react-scripts --openssl-legacy-provider start".
+
     - running "npm install" in the terminal.
+
     - running "npm start" in the terminal.
  
 ### Deploying to Heroku
@@ -532,14 +641,23 @@ Note that the API will also have to configured to allow access to local hosts.
 During the development of the project, version control was used by committing and pushing the code to GitHub. The GitHub repository can be found here: https://github.com/JoaoHigino/video-games-reviews
 
 This project was deployed to Heroku by:
+
 - Committing and pushing the code to GitHub.
+
 - Logging in to your Heroku account at Heroku.com.
+
 - On the Heroku website, clicking 'New' and then 'Create New App'.
+
 - Setting the name and region and pressing 'Create App'.
+
 - Clicking the 'Deploy' tab.
+
 - Clicking 'Connect to GitHub', search for repository, click 'Connect'.
+
 - Enabling Manual Deploy. Check for successful message.
+
 - Enabling Automatic Deploys.
+
 - The live site can be found here: https://video-games-reviews.herokuapp.com/
 
 ### Connecting to the API
@@ -549,8 +667,13 @@ In axiosDefaults.js, the "axios.defaults.baseURL" variable needs to be set to th
 ## Credits
 
 - Code Institute's Moments project was used to lay the foundations of this project and was adapted on to create a unique project. (https://github.com/Code-Institute-Solutions/moments/tree/bb6657e265fb18360b841e10d9d633dad06f4e5c)
+
 - To my amazing wife Sandra, my best friend, my mentor, and my safe haven, without her, all my dreams will be impossible to achieve. She is everything.
+
 - To my two kids, Maria and Thomas, with them life is easy and light. They make me laugh and think that our future is bright.
+
 - To my family and friends - for being a great support and providing a lot of the user testing for me, especially my friends from "Liga 7 BP" with their craziness helped me to clean my head.
+
 - To my mentor Gareth Mcgirr for all his guidance, support, tips, and feedback.
-- The Code Institute community on slack and my classmates its been a pleasure so far.
+
+- The Code Institute community on slack and my classmates its was a pleasure.
