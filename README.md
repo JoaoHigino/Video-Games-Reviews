@@ -1,6 +1,7 @@
 # Video Games Reviews
 
-
+Video games reviews is a review app destiny for enthusiasts and gamers. The main goal of this app is to encourage a player to play(or not) a specific game.
+A community can be created in the future with the possibility to coop or play as a team a specific game.
 
 ![Image showing the website's responsiveness on different screens](/src/assets/readmefiles/amiresponsive.png)
 
@@ -30,16 +31,12 @@ A site that is accessed via login and provides users with the features of creati
 |No.|Goal|Description|
 |---|---|---|
 |1|Log in/log out/Sign up | User can create an account and login or log out|
-|2|Posts page styled with SuperHero theme | A responsive homepage with post CRUD functionality|
+|2|Posts page styled with video games theme | A responsive homepage with post CRUD functionality|
 |3|Comments | Comments for each post with CRUD functionality|
 |4|Profiles (Created on new account) | Profiles with full CRUD Functionality |
-|5|Powers (Created on new account) | Powers for each User with full CRUD Functionality |
-|6| Powers search and rating | Powers can be searched via a drop down menu |
-|7| Site styled in strong comic-book styling | A design theme that runs consistently across the site |
-|8| Front-end react website and custom built API| Hosted on Heroku |
-|9| Deployment of final website to Heroku | Upon project completion | 
-|10| Document all known bugs and issues | Ensure documentation is clear and honest |
-
+|5| Front-end react website and custom built API| Hosted on Heroku |
+|6| Deployment of final website to Heroku | Upon project completion | 
+|7| Document all known bugs and issues | Ensure documentation is clear and honest |
 
 ## User Stories
 
@@ -482,7 +479,7 @@ React components are blocks of code that are reusable throughout an application.
 
 ![py](../video-games-reviews/src/assets/readmefiles/postsserialzer.png) - Serializer
 
-![py](../video-games-reviews/src/assets/readmefiles/profileview.png) - Views
+![py](../video-games-reviews/src/assets/readmefiles/profilesviews.png) - Views
 
 - Favourites
 
@@ -552,12 +549,11 @@ Site was tested using the following desktop and mobile browsers:
 
 ### Remaining Bugs
 
-- Image detail doesn't render correct
+- Image detail doesn't render correct when add post or edit post.
 
 ![bug](../video-games-reviews/src/assets/readmefiles/bug.png) 
 
 - Bug on IOS mobile devices, turn off ‘prevent cross site tracking’ in iOS settings is the only way to make the website works on iphones/iPads.
-
 
 ## Technologies Used
 
