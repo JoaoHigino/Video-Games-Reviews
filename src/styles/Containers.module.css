@@ -63,7 +63,6 @@
 
 .SmallComponent {
     width: 40vw;
-    margin-top: 15vh;
 }
 
 .SingleComponent {
@@ -103,7 +102,6 @@
     border-radius: 20px;
     background-color: rgb(15, 15, 15);
     max-width: 50%;
-    margin-top: 3vh;
     margin-bottom: 3vh;
 }
 
@@ -144,7 +142,6 @@
 
     .SingleComponent {
         width: 90%;
-        margin-top: vh;
     }
 
     .FlexHeight {
