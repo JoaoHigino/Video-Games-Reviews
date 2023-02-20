@@ -1,6 +1,7 @@
 # Video Games Reviews
 
 Video games reviews is a review app destiny for enthusiasts and gamers. The main goal of this app is to encourage a player to play(or not) a specific game.
+
 A community can be created in the future with the possibility to coop or play as a team a specific game.
 
 ![Image showing the website's responsiveness on different screens](/src/assets/readmefiles/amiresponsive.png)
@@ -8,8 +9,11 @@ A community can be created in the future with the possibility to coop or play as
 ## Project Links
 
 - [Deployed Front End Site](https://video-games-reviews.herokuapp.com)
+
 - [Repository for Front End Site](https://github.com/JoaoHigino/video-games-reviews)
+
 - [Deployed API Site](https://video-games-reviews-api.herokuapp.com)
+
 - [Repository for API Site](https://github.com/JoaoHigino/video-games-reviews-api)
 
 ## UX Design and Planning
@@ -464,6 +468,11 @@ React components are blocks of code that are reusable throughout an application.
 
 ![html](/src/assets/readmefiles/w3validator.png) 
 
+### Eslint
+
+- Eslint was installed and configured locally. After running, for the first time got some errors "Function component is not a arrow function" and "`'` can be escaped with `&apos;`, `&lsquo;`, `'`, `&rsquo;`". After fixing this errors Eslint returned without errors.
+
+![html](/src/assets/readmefiles/eslint.png) 
 
 ### CSS
 
