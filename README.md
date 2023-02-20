@@ -57,7 +57,7 @@ An agile development strategy was implemented in this project as user stories we
 3. As a **user** I can **edit my posts title and description**.
 4. As a **user** I can **view the details of a single post so that I can learn more about it**.
 5. As a **user** I can **view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content**.
-6. As a ****user** I can **search for posts and categories so that I can find specific themes**.
+6. As a **user** I can **search for posts and categories so that I can find specific themes**.
 7. As a **user** I can **view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them**
 8. As a **user** I can **view the details of a single post so that I can learn more about it**
 
@@ -90,7 +90,7 @@ An agile development strategy was implemented in this project as user stories we
 
 ### Landing page
 
-![landing page](../video-games-reviews/src/assets/readmefiles/landingpage.png)
+![landing page](/src/assets/readmefiles/landingpage.png)
 
 - Styled to give the feel of a video gamer database login
 
@@ -100,36 +100,36 @@ An agile development strategy was implemented in this project as user stories we
 
 - Displays the brand logo and name of the website to the user.
 
-![logo](../video-games-reviews/src/assets/readmefiles/logored.png)
+![logo](/src/assets/readmefiles/logored.png)
 
 - A red background color and white font color provides sufficient contrast so the links are clearly visible.
 
 - A blue hover effect also provides sufficient contrast and improves the user experience by showing that the links are clickable. 
 
-![hoover](../video-games-reviews/src/assets/readmefiles/hoover.png)
+![hoover](/src/assets/readmefiles/hoover.png)
 
 - On screens sizes with sufficient space, 'Font Awesome' icons are used for extra clarity of the links.
 
 - The active page's nav link appears green to indicate to the user which page they are currently viewing.
 
-![image of navbar in](../video-games-reviews/src/assets/readmefiles/greenhome.png)
+![image of navbar in](/src/assets/readmefiles/greenhome.png)
 
 - Allows the user to navigate between pages on the website.
 
 - On smaller screens, a hamburger icon appears and opens a dropdown menu when clicked, displaying all of the navbar links. This provides a better user experience as the navbar doesn't have to take up unnecessary space and it maximises the space for other content.
 
-![burger](../video-games-reviews/src/assets/readmefiles/burger.png)
+![burger](/src/assets/readmefiles/burger.png)
 
 - On smaller screens, the navbar automatically closes after clicking a nav link or clicking off of the nav bar to provide a better users experience.
 
 - Conditional rendering is used to display different nav links to users that are logged in and logged out. This limits users to being able to only use site functionality relevant to their log in status.
 
-![loggeout](../video-games-reviews/src/assets/readmefiles/loggedout.png)
-![loggedin](../video-games-reviews/src/assets/readmefiles/loggedin.png)
+![loggeout](/src/assets/readmefiles/loggedout.png)
+![loggedin](/src/assets/readmefiles/loggedin.png)
 
 - Users are able to see their log in avatar in the navbar.
 
-![profile](../video-games-reviews/src/assets/readmefiles/profilepicture.png)
+![profile](/src/assets/readmefiles/profilepicture.png)
 
 
 ### Sign Up
@@ -144,7 +144,7 @@ An agile development strategy was implemented in this project as user stories we
 
 - By clicking the 'Sign Up' button, the form is submitted and the user is redirected to the 'Home' page.
 
-![sign up](../video-games-reviews/src/assets/readmefiles/signup.png)
+![sign up](/src/assets/readmefiles/signup.png)
 
 ### Sign In
 
@@ -158,7 +158,7 @@ An agile development strategy was implemented in this project as user stories we
 
 - By clicking the 'Sign In' button, the form is submitted and the user is redirected to the 'Home' page.
 
-![sign in](../video-games-reviews/src/assets/readmefiles/signin.png)
+![sign in](/src/assets/readmefiles/signin.png)
 
 
 ### Home Page
@@ -175,7 +175,7 @@ An agile development strategy was implemented in this project as user stories we
 
 - Display the most followed profiles with the possibilty to follow/unfollow a profile.
 
-![home screen](../video-games-reviews/src/assets/readmefiles/home.png)
+![home screen](/src/assets/readmefiles/home.png)
 
 - Buttons are present at the bottom of the post to allow the user to comment, add favourite and like the post.
 
@@ -185,12 +185,12 @@ An agile development strategy was implemented in this project as user stories we
 
 - By clicking the a like button, the count for the option will increment by 1 and the icon colour will become solid.
 
-![comment](../video-games-reviews/src/assets/readmefiles/favlikes.png)
+![comment](/src/assets/readmefiles/favlikes.png)
 
 
 ### Post Page
 
-![post view](../video-games-reviews/src/assets/readmefiles/posts.png)
+![post view](/src/assets/readmefiles/posts.png)
 
 - Shows a specific, single post, with more details such as by showing the 'Add Comment' form, comments and more options dropdown. 
 
@@ -208,16 +208,16 @@ An agile development strategy was implemented in this project as user stories we
 
 - If ther current user is the author of the comment, a more options dropdown button will appear as three dots. When clicked, the user can select the pencil button to load the 'Edit Comment' form, or the bin to delete the comment.
 
-![comment](../video-games-reviews/src/assets/readmefiles/comments.png)
+![comment](/src/assets/readmefiles/comments.png)
 
-![edit comment](../video-games-reviews/src/assets/readmefiles/editcomment.png)
+![edit comment](/src/assets/readmefiles/editcomment.png)
 
-![edit comment2](../video-games-reviews/src/assets/readmefiles/editcomment2.png)
+![edit comment2](/src/assets/readmefiles/editcomment2.png)
 
 
 ### Profile view
 
-![profile view](../video-games-reviews/src/assets/readmefiles/profileread.png)
+![profile view](/src/assets/readmefiles/profileread.png)
 
 - Find the posts created by the user
 
@@ -229,24 +229,24 @@ An agile development strategy was implemented in this project as user stories we
 
 - Owner can choose to edit, change username and change password
 
-![edit](../video-games-reviews/src/assets/readmefiles/editprofile.png)
+![edit](/src/assets/readmefiles/editprofile.png)
 
 
 ### Favourites Page
 
 - Functions identically to the home page but only displays a feed of posts that the logged in user has favourited.
 
-![favourites page](../video-games-reviews/src/assets/readmefiles/favourites.png)
+![favourites page](/src/assets/readmefiles/favourites.png)
 
 - If the user is yet to favourite a post, the user receives a message explaining that they need to favourite a post first.
 
-![without favourites](../video-games-reviews/src/assets/readmefiles/withoufavourites.png)
+![without favourites](/src/assets/readmefiles/withoufavourites.png)
 
 ### Contact Page
 
 - A user can contact the admin
 
-![contact](../video-games-reviews/src/assets/readmefiles/contact.png)
+![contact](/src/assets/readmefiles/contact.png)
 
 ### Add Post
 
@@ -254,28 +254,28 @@ An agile development strategy was implemented in this project as user stories we
 
 - Accessed via the 'Add Post' button.
 
-![add post](../video-games-reviews/src/assets/readmefiles/addpostnav.png)
+![add post](/src/assets/readmefiles/addpostnav.png)
 
 - Users must input a title, image and content before submitting a post. Validation is used to check that fields are not left blank and users receive an alert message to explain the error if they try to submit the form with a blank field.
  Placeholder text is used to inform the user of the information required for each field.
 
-![add post error](../video-games-reviews/src/assets/readmefiles/addposterror.png)
+![add post error](/src/assets/readmefiles/addposterror.png)
 
 - The image input will be displayed as a small preview to the user so can check their image before submitting the form.
 
-![add post preview](../video-games-reviews/src/assets/readmefiles/postpreview.png)
+![add post preview](/src/assets/readmefiles/postpreview.png)
 
 - Users can create a post using the submit button, or be returned to the home page by clicking on the cancel button.
 
 - Once the form is submitted, the user will be redirected to the 'Home' page, where they can see their new post in the feed.
 
-![add post form](../video-games-reviews/src/assets/readmefiles/addpostread.png)
+![add post form](/src/assets/readmefiles/addpostread.png)
 
 ### Edit Post
 
 - Allows logged in users to change the content of an existing post.
 
-![edit post form](../video-games-reviews/src/assets/readmefiles/postedit.png)
+![edit post form](/src/assets/readmefiles/postedit.png)
 
 - Accessed by clicking on the 'MoreDropdown' link on the 'Post' page. Can only be accessed if the current user is the author of the post to ensure that users cannot edit the content of other users' posts.
 
@@ -287,9 +287,9 @@ An agile development strategy was implemented in this project as user stories we
 
 - Clicking the 'Save' button will result in updated fields to be saved to the post's data. The user will be returned to 'Post' page.
 
-![edit save](../video-games-reviews/src/assets/readmefiles/editsave.png)
+![edit save](/src/assets/readmefiles/editsave.png)
 
-![edit image](../video-games-reviews/src/assets/readmefiles/cangeimagepost.png)
+![edit image](/src/assets/readmefiles/cangeimagepost.png)
 
 ## React Components
 
@@ -325,7 +325,7 @@ React components are blocks of code that are reusable throughout an application.
 
 - Improves the user experience by providing feedback after an error, rather than leaving them to become confused.
 
-![edit image](../video-games-reviews/src/assets/readmefiles/exist.png)
+![edit image](/src/assets/readmefiles/exist.png)
 
 
 ## Future Features
@@ -448,64 +448,64 @@ React components are blocks of code that are reusable throughout an application.
 
 - No errors found
 
-![html](../video-games-reviews/src/assets/readmefiles/w3validator.png) 
+![html](/src/assets/readmefiles/w3validator.png) 
 
 
 ### CSS
 
 - The W3C CSS Validator Service was used to validate the project's custom CSS files to ensure there were no syntax errors.
 
-![css](../video-games-reviews/src/assets/readmefiles/w3c.png) 
+![css](/src/assets/readmefiles/readmefiles/w3c.png) 
 
 ### Python
 
 - Comments
 
-![py](../video-games-reviews/src/assets/readmefiles/contactmodels.png) - Models
+![py](/src/assets/readmefiles/contactmodels.png) - Models
 
-![py](../video-games-reviews/src/assets/readmefiles/contactserializer.png) - Serializer
+![py](/src/assets/readmefiles/contactserializer.png) - Serializer
 
-![py](../video-games-reviews/src/assets/readmefiles/contactsviews.png) - Views
+![py](/src/assets/readmefiles/contactsviews.png) - Views
 
 - Likes
 
-![py](../video-games-reviews/src/assets/readmefiles/likesmodels.png) - Models
+![py](/src/assets/readmefiles/likesmodels.png) - Models
 
-![py](../video-games-reviews/src/assets/readmefiles/likesserializer.png) - Serializer
+![py](/src/assets/readmefiles/likesserializer.png) - Serializer
 
-![py](../video-games-reviews/src/assets/readmefiles/likesviews.png) - Views
+![py](/src/assets/readmefiles/likesviews.png) - Views
 
 - Profiles
 
-![py](../video-games-reviews/src/assets/readmefiles/profilesodels.png) - Models
+![py](/src/assets/readmefiles/profilesodels.png) - Models
 
-![py](../video-games-reviews/src/assets/readmefiles/postsserialzer.png) - Serializer
+![py](/src/assets/readmefiles/postsserialzer.png) - Serializer
 
-![py](../video-games-reviews/src/assets/readmefiles/profilesviews.png) - Views
+![py](/src/assets/readmefiles/profilesviews.png) - Views
 
 - Favourites
 
-![py](../video-games-reviews/src/assets/readmefiles/favouritesmodels.png) - Models
+![py](/src/assets/readmefiles/favouritesmodels.png) - Models
 
-![py](../video-games-reviews/src/assets/readmefiles/favouritesserializer.png) - Serializer
+![py](/src/assets/readmefiles/favouritesserializer.png) - Serializer
 
-![py](../video-games-reviews/src/assets/readmefiles/favouritesviews.png) - Views
+![py](/src/assets/readmefiles/favouritesviews.png) - Views
 
 - Contact
 
-![py](../video-games-reviews/src/assets/readmefiles/contactmodels.png) - Models
+![py](/src/assets/readmefiles/contactmodels.png) - Models
 
-![py](../video-games-reviews/src/assets/readmefiles/contactserializer.png) - Serializer
+![py](/src/assets/readmefiles/contactserializer.png) - Serializer
 
-![py](../video-games-reviews/src/assets/readmefiles/contactsviews.png) - Views
+![py](/src/assets/readmefiles/contactsviews.png) - Views
 
 - Posts
 
-![py](../video-games-reviews/src/assets/readmefiles/postsmodels.png) - Models
+![py](/src/assets/readmefiles/postsmodels.png) - Models
 
-![py](../video-games-reviews/src/assets/readmefiles/postsserialzer.png) - Serializer
+![py](/src/assets/readmefiles/postsserialzer.png) - Serializer
 
-![py](../video-games-reviews/src/assets/readmefiles/postsviews.png) - Views
+![py](/src/assets/readmefiles/postsviews.png) - Views
 
 ### Lighthouse Scores
 
@@ -513,19 +513,19 @@ The site scored fine. Performance different a lot using live site vs incognito v
 
 - Main Page
 
-![Lighthouse](../video-games-reviews/src/assets/readmefiles/lighouse.png) 
+![Lighthouse](/src/assets/readmefiles/lighouse.png) 
 
 - Add Post
 
-![Lighthouse](../video-games-reviews/src/assets/readmefiles/lighouseaddpost.png) 
+![Lighthouse](/src/assets/readmefiles/lighouseaddpost.png) 
 
 - Favourite
 
-![Lighthouse](../video-games-reviews/src/assets/readmefiles/lighousefavourite.png)
+![Lighthouse](/src/assets/readmefiles/lighousefavourite.png)
 
 - Profile
 
-![Lighthouse](../video-games-reviews/src/assets/readmefiles/lighouseprofile.png)
+![Lighthouse](/src/assets/readmefiles/lighouseprofile.png)
 
 ### Devices used for manual testing
 
@@ -533,19 +533,19 @@ Site was tested using the following desktop and mobile browsers:
 
 - Chrome  
 
-![chrome](../video-games-reviews/src/assets/readmefiles/chrome.png) 
+![chrome](/src/assets/readmefiles/chrome.png) 
 
 - Safari 
 
-![safari](../video-games-reviews/src/assets/readmefiles/safari.png) 
+![safari](/src/assets/readmefiles/safari.png) 
 
 - Edge
 
-![edge](../video-games-reviews/src/assets/readmefiles/edge.png) 
+![edge](/src/assets/readmefiles/edge.png) 
 
 - Opera
 
-![edge](../video-games-reviews/src/assets/readmefiles/opera.png) 
+![edge](/src/assets/readmefiles/opera.png) 
 
 ### Bugs
 
@@ -553,7 +553,7 @@ Site was tested using the following desktop and mobile browsers:
 
 - Image detail doesn't render correct when add post or edit post.
 
-![bug](../video-games-reviews/src/assets/readmefiles/bug.png) 
+![bug](/src/assets/readmefiles/bug.png) 
 
 - Bug on IOS mobile devices, turn off ‘prevent cross site tracking’ in iOS settings is the only way to make the website works on iphones/iPads.
 
