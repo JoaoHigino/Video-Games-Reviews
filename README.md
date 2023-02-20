@@ -179,7 +179,7 @@ An agile development strategy was implemented in this project as user stories we
 
 - Display the most followed profiles with the possibilty to follow/unfollow a profile.
 
-![home screen](/src/assets/readmefiles/home.png)
+![home screen](/src/assets/readmefiles/mainpage.png)
 
 - Buttons are present at the bottom of the post to allow the user to comment, add favourite and like the post.
 
