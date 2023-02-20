@@ -18,7 +18,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { Alert } from "react-bootstrap";
 import { useRedirect } from "../../hooks/useRedirect";
 
-function PostCreateForm() {
+const PostCreateForm = () => {
   useRedirect("loggedOut");
 
   const [errors, setErrors] = useState({});
@@ -35,7 +35,7 @@ function PostCreateForm() {
 
   const history = useHistory();
 
-  
+
   const handleChange = (event) => {
     setPostData({
       ...postData,

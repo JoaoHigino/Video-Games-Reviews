@@ -469,7 +469,7 @@ React components are blocks of code that are reusable throughout an application.
 
 - The W3C CSS Validator Service was used to validate the project's custom CSS files to ensure there were no syntax errors.
 
-![css](/src/assets/readmefiles/readmefiles/w3c.png) 
+![css](/src/assets/readmefiles/w3c.png) 
 
 ### Python
 

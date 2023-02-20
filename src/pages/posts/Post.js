@@ -143,7 +143,7 @@ const Post = (props) => {
           {is_owner ? (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't like your own post!</Tooltip>}
+              overlay={<Tooltip>You can not like your own post!</Tooltip>}
             >
               <i className="far fa-heart" />
             </OverlayTrigger>
@@ -173,7 +173,7 @@ const Post = (props) => {
           <>
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't favourite your own post</Tooltip>}
+              overlay={<Tooltip>You can not favourite your own post</Tooltip>}
             >
               <i className={`fa-regular fa-star ${styles.FavouriteIcon}`} />
             </OverlayTrigger>
@@ -200,7 +200,7 @@ const Post = (props) => {
             </OverlayTrigger>
           </>
         )}
-    </Card.Body>
+      </Card.Body>
     </Card >
   );
 };

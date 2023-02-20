@@ -11,7 +11,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
 
 
-function SignInForm() {
+const SignInForm = () => {
   const setCurrentUser = useSetCurrentUser();
   useRedirect("loggedIn");
 
@@ -54,7 +54,7 @@ function SignInForm() {
           className={`${frame.ContentToneBorder} ${frame.Shadow}container-md`}
         >
           <h4 className={`${appStyles.ComicText} text-center text-uppercase`}>
-            Welcome back gamer... it's time to sign in!
+         Welcome back gamer... it is time to sign in!
           </h4>
 
           <Form onSubmit={handleSubmit}>
@@ -110,7 +110,7 @@ function SignInForm() {
 
           <Container className={`mt-3 ${appStyles.Content}`}>
             <Link className={styles.Link} to="/signup">
-              Don't have an account? <span>Sign up here!</span>
+              Do not have an account? <span>Sign up here!</span>
             </Link>
           </Container>
         </Container>
