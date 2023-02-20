@@ -171,7 +171,7 @@ An agile development strategy was implemented in this project as user stories we
 
 - Controls section at the top of the page includes a search bar, category filter and post button. These are above the posts so that the user is instantly aware that they can manipulate the page content.
 
-- Search bar allows users to search for posts on the website by title. 
+- Search bar allows users to search for posts on the website by title or user's name. 
 
 - Add Post button allows users to be redirected to the 'Create Post' page, where they can add their own post to the website. The button only appears if the current user is logged in.
 
@@ -333,8 +333,6 @@ React components are blocks of code that are reusable throughout an application.
 
 
 ## Future Features
-
-- To be able to search for a user instead of only search for a post.
 
 - Create a rating system to the posts.
 
@@ -583,6 +581,7 @@ Site was tested using the following desktop and mobile browsers:
 ## Technologies Used
 
 ### Languages and Frameworks Used
+
 - HTML
 - JavaScript
 - React
