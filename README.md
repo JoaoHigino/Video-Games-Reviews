@@ -364,83 +364,97 @@ React components are blocks of code that are reusable throughout an application.
 | 015 | Logged out users are unable to access pages exclusive to logged in users (e.g. 'Add Post' page) and are either reidrected to the 'Home' page or see a page not found message. | Logged out users are unable to use logged in user functionality are redirected to the 'Home' page or see a page not found message.  | Pass |
 | 016 | Logged in users are unable to access the pages exclusive to logged out users (e.g. 'Sign Up' and 'Sign In' pages) | When a logged in users tries to access a URL to a page exclusive to logged out users, they are redirected to the 'Home' page. | Pass |
 | 017 | Users can log out of their account using the 'Sign Out' link in the navbar. | Users can log out and are redirected to the 'Home' page. | Pass |
+| 018 | When users successfully register for an account, the profile instance is created in the API and has the correct data. | User instance is created and the data is correct. | Pass |
 
 ### Posts
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 018 | The 'Home' page renders a feed of posts if they exist. Most recent posts are seen first. | A feed of posts can be seen if post instances are created. Most recent posts are seen at the top of the feed. | Pass |
-| 019 |The 'Favourites' page renders a feed of posts that the current user has already favourited. | A feed of posts is shown; only including posts that the user has favourited. | Pass |
-| 020 | When no posts exist on the 'Home' or 'Favourites' pages. A message is displayed to inform the user that there are no results. | No results image and message seen on each page when no posts exist. | Pass |
-| 021 | The search bar can be used to filter the posts feed by a post's title. | The search bar returns a feed of posts the where the input matchespost's title. | Pass |
-| 022 | The 'Add Post' button (allowing users to add a post) only renders for logged in users. | Only logged in users can see the 'Post' button. | Pass |
-| 023 | Each post in the feed displays the all the correct information about the post. | Each post includes a title, author name, profile image, date, description, image, comment button, and favourite button. | Pass |
-| 024 | 'Post' page (showing detail about a particular post) can be accessed by clicking on a particular post's image. | Cliciking on a post's image loads a page containing only the specific post. | Pass |
-| 025 | The 'Post' page shows comments for a post if they exist, or a message if they don't. | Comments can be seen in a feed below the post when they exist. If there are no comments, the user is informed. | Pass |
-| 026 | If the user is logged in, the 'Post' page shows the 'Add Comment' form. | 'Add Comment' visible under the post, only if the user is logged in. | Pass |
-| 027 | Only the author of a post, can access its 'Edit Post' page. |  The post author can access the 'Edit Post' form, whereas other users are redirected to the 'Home' page. | Pass |
-| 028 | Logged in users can use the 'Add Post' form to add a new post to the website. | Submitting valid data in the 'Add Post' form will create a post which can be seen in the posts feed. | Pass |
-| 029 | Users cannot create a post if data is invalid in the 'Add Post' form. | 'Add Post' form handles invalid data when a user tries to submit the form (e.g. empty fields) and informs the user of the error as an alert message under the invalid field. | Pass |
-| 030 | Clicking the 'Cancel' button in the 'Create Post' form results in no post being created and the user being returned to the 'Home' page. | No post is created and the user is redirected to the 'Home' page. | Pass |
-| 031 | 'Edit Post' form renders pre-filled with existing post data. | Each input has the existing post data when the form is loaded. | Pass |
-| 032 | Users cannot edit a post if data is invalid in the 'Post Edit' form. | 'Edit Post' form handles invalid data when a user tries to submit the form (e.g. empty fields) and informs the user of the error as an alert message under the invalid field. | Pass |
-| 033 | Clicking the 'Cancel' button in the 'Edit Post' form results in no post changes being saved and the user being returned to the 'Home' page. | No post data is changed and the user is redirected to the 'Home' page. | Pass ||
-| 034 | Clicking the delete button in the 'MoreDropdown' on the 'Post' page results in post being deleted and the user is redirected to the 'Home' page. | The post is deleted and is no longer seen in the post feed. The user is redirected to the 'Home' page. | Pass |
+| 019 | The 'Home' page renders a feed of posts if they exist. Most recent posts are seen first. | A feed of posts can be seen if post instances are created. Most recent posts are seen at the top of the feed. | Pass |
+| 020 |The 'Favourites' page renders a feed of posts that the current user has already favourited. | A feed of posts is shown; only including posts that the user has favourited. | Pass |
+| 021 | When no posts exist on the 'Home' or 'Favourites' pages. A message is displayed to inform the user that there are no results. | No results image and message seen on each page when no posts exist. | Pass |
+| 022 | The search bar can be used to filter the posts feed by a post's title. | The search bar returns a feed of posts the where the input matchespost's title. | Pass |
+| 023 | The 'Add Post' button (allowing users to add a post) only renders for logged in users. | Only logged in users can see the 'Post' button. | Pass |
+| 024 | Each post in the feed displays the all the correct information about the post. | Each post includes a title, author name, profile image, date, description, image, comment button, and favourite button. | Pass |
+| 025 | 'Post' page (showing detail about a particular post) can be accessed by clicking on a particular post's image. | Cliciking on a post's image loads a page containing only the specific post. | Pass |
+| 026 | The 'Post' page shows comments for a post if they exist, or a message if they don't. | Comments can be seen in a feed below the post when they exist. If there are no comments, the user is informed. | Pass |
+| 027 | If the user is logged in, the 'Post' page shows the 'Add Comment' form. | 'Add Comment' visible under the post, only if the user is logged in. | Pass |
+| 028 | Only the author of a post, can access its 'Edit Post' page. |  The post author can access the 'Edit Post' form, whereas other users are redirected to the 'Home' page. | Pass |
+| 029 | Logged in users can use the 'Add Post' form to add a new post to the website. | Submitting valid data in the 'Add Post' form will create a post which can be seen in the posts feed. | Pass |
+| 030 | Users cannot create a post if data is invalid in the 'Add Post' form. | 'Add Post' form handles invalid data when a user tries to submit the form (e.g. empty fields) and informs the user of the error as an alert message under the invalid field. | Pass |
+| 031 | Clicking the 'Cancel' button in the 'Create Post' form results in no post being created and the user being returned to the 'Home' page. | No post is created and the user is redirected to the 'Home' page. | Pass |
+| 032 | When the user successfully creates a post, the post instance is created in the API and has the correct data. | Post instance is created and the data is correct. | Pass |
+| 033 | 'Edit Post' form renders pre-filled with existing post data. | Each input has the existing post data when the form is loaded. | Pass |
+| 034 | Users cannot edit a post if data is invalid in the 'Post Edit' form. | 'Edit Post' form handles invalid data when a user tries to submit the form (e.g. empty fields) and informs the user of the error as an alert message under the invalid field. | Pass |
+| 035 | Clicking the 'Cancel' button in the 'Edit Post' form results in no post changes being saved and the user being returned to the 'Home' page. | No post data is changed and the user is redirected to the 'Home' page. | Pass ||
+| 036 | When the user successfully edits a post, the post instance is updated in the API and has the correct data. | Post instance is updated and the data is correct. | Pass |
+| 037 | Clicking the delete button in the 'MoreDropdown' on the 'Post' page results in post being deleted and the user is redirected to the 'Home' page. | The post is deleted and is no longer seen in the post feed. The user is redirected to the 'Home' page. | Pass |
+| 038 | When the user successfully deletes a post, the post instance is deleted in the API. | Post instance is deleted. | Pass |
 
 ### Comments
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 035 | Logged in users can comment on posts. | Comment form is rendered on the 'Post' page for logged in users and they can successfully create comments. Comment can be seen under the comment form.| Pass | 
-| 036 | Logged out users cannot comment on posts. | No comment form is rendered on the 'Post' page so they cannot make a comment. | Pass | 
-| 037| Users cannot add a comment of empty content. | Submitting an empty comment form doesn't result in a comment being made. | Pass |
-| 038 | When a user comments on a post, the count for comments is increased by 1. | Commenting on a post causes the number beside the button (count) to increase by one. | Pass | 
-| 039 | Authors of a comment, can edit their comment. | Comment authors can see a 'MoreDropdown' icon and click the edit button to render a 'Edit Comment' form. Updating the content and saving the form results in the comment being updated. | Pass |
-| 040 | Users cannot edit a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot edit its content. | Pass |
-| 041 | Authors of a comment, can delete their comment. | Comment authors can see a 'MoreDropdown' icon and click the delete button to delete the comment. | Pass |
-| 042 | Users cannot delete a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot delete the comment. | Pass |
-| 043 | When a user deletes a comment on a post, the count for comments is decreased by 1. | Deleting a comment on a post causes the number beside the button (count) to decrease by one. | Pass |
+| 039 | Logged in users can comment on posts. | Comment form is rendered on the 'Post' page for logged in users and they can successfully create comments. Comment can be seen under the comment form.| Pass | 
+| 040 | Logged out users cannot comment on posts. | No comment form is rendered on the 'Post' page so they cannot make a comment. | Pass | 
+| 041| Users cannot add a comment of empty content. | Submitting an empty comment form doesn't result in a comment being made. | Pass |
+| 042 | When a user comments on a post, the count for comments is increased by 1. | Commenting on a post causes the number beside the button (count) to increase by one. | Pass | 
+| 043 | When a user successfully creates a comment, a comment instance is created in the API. The post instance has its comments_count updated in the API. | A comment instance is created and the post instance is updated correctly in the API. | Pass |
+| 044 | Authors of a comment, can edit their comment. | Comment authors can see a 'MoreDropdown' icon and click the edit button to render a 'Edit Comment' form. Updating the content and saving the form results in the comment being updated. | Pass |
+| 045 | Users cannot edit a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot edit its content. | Pass |
+| 046 | When a user successfully edits a comment, the comment instance is updated in the API. | A comment instance is created in the API. | Pass | 
+| 047 | Authors of a comment, can delete their comment. | Comment authors can see a 'MoreDropdown' icon and click the delete button to delete the comment. | Pass |
+| 048 | Users cannot delete a comment they are not the author of. | No 'MoreDropdown' icon is rendered on the comment so they cannot delete the comment. | Pass |
+| 049 | When a user deletes a comment on a post, the count for comments is decreased by 1. | Deleting a comment on a post causes the number beside the button (count) to decrease by one. | Pass |
+| 050 | When a user successfully deletes a comment, the comment instance is deleted in the API. The post instance has its comments_count updated in the API. | The comment instance is deleted and the post instance is updated correctly in the API. | Pass |
 
 ### Favourites
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 044 | Logged in users can favourite posts. | Logged in users can click the star icon to favourite a post. | Pass | 
-| 045 | Users cannot favourite their own posts and are informed by an overlay. | Users cannot favourite their own posts and can notice an overlay message to explain the error when hovering over the favourite button. | Pass |
-| 046 | When a user successfully favourites a post, the favourite button colour becomes solid. | A solid button colour is shown when the post is set as a favourite. | Pass |
-| 047 | Users can delete the favourite by clicking the favourite button again. | Clicking the favourite button again removes the favourite. | Pass |
-| 048 | When a user successfully favourites a post, the favourite button colour becomes no longer solid. | Solid button colour disappears when the post is set to no longer be a favourite. | Pass |
+| 051 | Logged in users can favourite posts. | Logged in users can click the star icon to favourite a post. | Pass | 
+| 052 | Users cannot favourite their own posts and are informed by an overlay. | Users cannot favourite their own posts and can notice an overlay message to explain the error when hovering over the favourite button. | Pass |
+| 053 | When a user successfully favourites a post, the favourite button colour becomes solid. | A solid button colour is shown when the post is set as a favourite. | Pass |
+| 054 | When a user successfully favourites a post, a favourite instance is created in the API. | Instance is created in the API. | Pass |
+| 055 | Users can disable the favourite by clicking the favourite button again. | Clicking the favourite button again removes the favourite. | Pass |
+| 056 | When a user successfully favourites a post, the favourite button colour becomes no longer solid. | Solid button colour disappears when the post is set to no longer be a favourite. | Pass |
+| 057 | When a user successfully removes a favourite on a post, a favourite instance is deleted in the API. | Instance is deleted in the API. | Pass |
 
 ### Likes
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 049 | Logged in users can like posts. | Logged in users can click the heart icon to like a post. | Pass | 
-| 050 | Users cannot like their own posts and are informed by an overlay. | Users cannot like their own posts and can notice an overlay message to explain the error when hovering over the like button. | Pass |
-| 051 | When a user successfully like a post, the like button colour becomes solid. | A solid button colour is shown when the post is liked. | Pass |
-| 052 | Users can delete the like by clicking the like button again. | Clicking the like button again removes the favourite. | Pass |
+| 058 | Logged in users can like posts. | Logged in users can click the heart icon to like a post. | Pass | 
+| 059 | Users cannot like their own posts and are informed by an overlay. | Users cannot like their own posts and can notice an overlay message to explain the error when hovering over the like button. | Pass |
+| 060 | When a user successfully like a post, the like button colour becomes solid. | A solid button colour is shown when the post is liked. | Pass |
+| 061 | When a user successfully like a post, the like instance is created in the API. | Instance is created in the API. | Pass |
+| 062 | Users can delete the like by clicking the like button again. | Clicking the like button again removes the favourite. | Pass |
+| 063 | When a user successfully removes a like on a post, a favourite instance is deleted in the API. | Instance is deleted in the API. | Pass |
 
 ### Profiles 
 
 | Test Case | Test Description | Test Outcome | Test Result |
 | ----------- | ----------- | ----------- | ----------- |
-| 053 | Users can view profiles by clicking on the profile image image or name link on a post. | Clicking on either link redirects the user to the to the profile page. | Pass |
-| 054 | Logged in users can also access their own profile via the 'Profile' navlink. | Navlink is present and redirects the user correctly. | Pass |
-| 055 | Profile page renders an information section (e.g. profile image, title, description), statistics (posts, followers, following) section and posts feed. | Profile page renders information, statistics and feed sections. | Pass |
-| 056 | The statistics section shows the correct information. | Statistics accurately show the number of posts, followers and following by a user. | Pass |
-| 057 | If a user creates a post or deletes a post and then returns to their profile, the post count updates correctly. | Creating a post increases the post count, and deleting a post decreases the post count. | Pass |
-| 058 | The 'ProfileDropdown' icon (providing links to 'Edit Profile', 'Change Username' and 'Change Password') is only present for users visiting their own profile. | 'ProfileDropdown' icon visible on a user's own profile but not when visiting a different user's profile. | Pass |
-| 059 | 'Edit Profile' form loads pre-filled with existing profile data. | The current profile data can be seen when loading the 'Edit Profile' form. | Pass |
-| 060 | Users can update their profile image and description by submitting valid data in the 'EditProfile' form. | Users are able to update their profile by submitting valid data. | Pass |
-| 061 | Users cannot submit the 'EditProfile' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
-| 062 | Clicking 'Cancel' in the 'EditProfile' form results in no data updates on the profile. | Clicking 'Cancel' does not update the profile and the user is redirected back to their profile. | Pass |
-| 063 | 'Change Username' form loads pre-filled with existing profile username. | The current username data can be seen when loading the 'Change Username' form. | Pass |
-| 064 | Users can update their username by submitting valid data in the 'ChangeUsername' form. | Users are able to update their username by submitting valid data. | Pass |
-| 065 | Users cannot submit the 'Change Username' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
-| 066 | Clicking 'Cancel' in the 'Change Username' form results in no data updates on the profile. | Clicking 'Cancel' does not update the username and the user is redirected back to their profile. | Pass |
-| 067 | Users can update their password by submitting valid data in the 'Change Password' form. | Users are able to update their password by submitting valid data. | Pass |
-| 068 | Users cannot submit the 'Change Password' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
-| 069 | Clicking 'Cancel' in the 'Change Password' form results in no data updates on the profile. | Clicking 'Cancel' does not update the password and the user is redirected back to their profile. | Pass |
+| 064 | Users can view profiles by clicking on the profile image image or name link on a post. | Clicking on either link redirects the user to the to the profile page. | Pass |
+| 065 | Logged in users can also access their own profile via the 'Profile' navlink. | Navlink is present and redirects the user correctly. | Pass |
+| 066 | Profile page renders an information section (e.g. profile image, title, description), statistics (posts, followers, following) section and posts feed. | Profile page renders information, statistics and feed sections. | Pass |
+| 067 | The statistics section shows the correct information. | Statistics accurately show the number of posts, followers and following by a user. | Pass |
+| 068 | If a user creates a post or deletes a post and then returns to their profile, the post count updates correctly. | Creating a post increases the post count, and deleting a post decreases the post count. | Pass |
+| 069 | The 'ProfileDropdown' icon (providing links to 'Edit Profile', 'Change Username' and 'Change Password') is only present for users visiting their own profile. | 'ProfileDropdown' icon visible on a user's own profile but not when visiting a different user's profile. | Pass |
+| 070 | 'Edit Profile' form loads pre-filled with existing profile data. | The current profile data can be seen when loading the 'Edit Profile' form. | Pass |
+| 071 | Users can update their profile image and description by submitting valid data in the 'EditProfile' form. | Users are able to update their profile by submitting valid data. | Pass |
+| 072 | Users cannot submit the 'EditProfile' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
+| 073 | Clicking 'Cancel' in the 'EditProfile' form results in no data updates on the profile. | Clicking 'Cancel' does not update the profile and the user is redirected back to their profile. | Pass |
+| 074 | When the profile is successfully updated, the 'Profile' instance is updated correctly in the API. | Instance is updated correctly in the API. | Pass |
+| 075 | 'Change Username' form loads pre-filled with existing profile username. | The current username data can be seen when loading the 'Change Username' form. | Pass |
+| 076 | Users can update their username by submitting valid data in the 'ChangeUsername' form. | Users are able to update their username by submitting valid data. | Pass |
+| 077 | Users cannot submit the 'Change Username' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
+| 078 | Clicking 'Cancel' in the 'Change Username' form results in no data updates on the profile. | Clicking 'Cancel' does not update the username and the user is redirected back to their profile. | Pass |
+| 079 | When the username is successfully updated, the 'Profile' instance is updated correctly in the API. | Instance is updated correctly in the API. | Pass |
+| 080 | Users can update their password by submitting valid data in the 'Change Password' form. | Users are able to update their password by submitting valid data. | Pass |
+| 081 | Users cannot submit the 'Change Password' form with invalid data and are alerted with a message. | Invalid data cannot be submitted in the form and a message is present under the invalid data. | Pass |
+| 082 | Clicking 'Cancel' in the 'Change Password' form results in no data updates on the profile. | Clicking 'Cancel' does not update the password and the user is redirected back to their profile. | Pass |
+| 083 | When the password is successfully updated, the 'Profile' instance is updated correctly in the API. | Instance is updated correctly in the API. | Pass |
 
 ## Code Validation
 
