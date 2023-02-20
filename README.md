@@ -325,10 +325,12 @@ React components are blocks of code that are reusable throughout an application.
 
 - Improves the user experience by providing feedback after an error, rather than leaving them to become confused.
 
+![edit image](../video-games-reviews/src/assets/readmefiles/exist.png)
+
 
 ## Future Features
 
-- To be able to search for a user instead of only serach for a post.
+- To be able to search for a user instead of only search for a post.
 
 - Create a rating system to the posts.
 
