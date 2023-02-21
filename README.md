@@ -169,7 +169,7 @@ An agile development strategy was implemented in this project as user stories we
 
 - Displays the most recent posts to the user in a continuous feed.
 
-- Controls section at the top of the page includes a search bar, category filter and post button. These are above the posts so that the user is instantly aware that they can manipulate the page content.
+- Controls section at the top of the page includes a search bar, favourites, contact us and add post button. These are above the posts so that the user is instantly aware that they can manipulate the page content.
 
 - Search bar allows users to search for posts on the website by title or user's name. 
 
@@ -185,7 +185,7 @@ An agile development strategy was implemented in this project as user stories we
 
 - By clicking the comment button, users are redirected to the 'Post' page, where a comment form is below the post.
 
-- By clicking the favourite button, users can add the post to their favourites feed. The favourite icon colour will become solid to inform the user that their vote has been registered.
+- By clicking the favourite button, users can add the post to their favourites feed. The favourite icon colour will become solid to inform the user that their favourite has been registered.
 
 - By clicking the a like button, the count for the option will increment by 1 and the icon colour will become solid.
 
@@ -550,7 +550,7 @@ The site scored fine. Performance different a lot using live site vs incognito v
 
 ### Devices used for manual testing
 
-Site was tested using the following desktop and mobile browsers:
+Site was tested using the following desktops:
 
 - Chrome  
 
@@ -572,7 +572,7 @@ Site was tested using the following desktop and mobile browsers:
 
 ### Remaining Bugs
 
-- Image detail doesn't render correct when add post or edit post.
+- Some images detail don't render correct when add post or edit post.
 
 ![bug](/src/assets/readmefiles/bug.png) 
 
@@ -583,7 +583,9 @@ Site was tested using the following desktop and mobile browsers:
 ### Languages and Frameworks Used
 
 - HTML
+
 - JavaScript
+
 - React
 
 ### Dependencies and Programs Used
@@ -693,7 +695,5 @@ In axiosDefaults.js, the "axios.defaults.baseURL" variable needs to be set to th
 - To my two kids, Maria and Thomas, with them life is easy and light. They make me laugh and think that our future is bright.
 
 - To my family and friends - for being a great support and providing a lot of the user testing for me, especially my friends from "Liga 7 BP" with their craziness helped me to clean my head.
-
-- To my mentor Gareth Mcgirr for all his guidance, support, tips, and feedback.
 
 - The Code Institute community on slack and my classmates its was a pleasure.
